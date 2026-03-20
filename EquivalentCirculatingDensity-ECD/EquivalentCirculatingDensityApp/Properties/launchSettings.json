@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "EquivalentCirculatingDensityApp": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
