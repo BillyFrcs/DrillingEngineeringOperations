@@ -30,7 +30,7 @@ double CalculateECD(double mudWeight, double pressureLoss, double trueVerticalDe
 
 int main()
 {
-    std::cout << "Equivalent Circulation Density (ECD) Calculation \n";
+    std::cout << "Equivalent Circulation Density (ECD) Calculation" << std::endl;
 
 	// DEBUG x86
 	std::cout << CalculateECD(12.2, 400, 12000) << " ppg" << std::endl;
