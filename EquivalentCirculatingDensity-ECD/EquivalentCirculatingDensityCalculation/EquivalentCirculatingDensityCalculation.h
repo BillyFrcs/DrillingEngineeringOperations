@@ -1,5 +1,8 @@
 #pragma once
 
+#ifndef ECD
+#define ECD
+
 namespace EquivalentCirculationDensity
 {
     class EquivalentCirculationDensityCalculation
@@ -17,3 +20,5 @@ namespace EquivalentCirculationDensity
         double CalculateECD() const;
     };
 }
+
+#endif // ECD
