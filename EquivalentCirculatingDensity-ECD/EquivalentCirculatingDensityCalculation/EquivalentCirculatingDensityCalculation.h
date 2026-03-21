@@ -3,9 +3,9 @@
 #ifndef ECD
 #define ECD
 
-namespace EquivalentCirculationDensity
+namespace EquivalentCirculatingDensity
 {
-    class EquivalentCirculationDensityCalculation
+    class EquivalentCirculatingDensityCalculation
     {
     private:
         double mudWeight = 0.0;
@@ -13,9 +13,9 @@ namespace EquivalentCirculationDensity
         double trueVerticalDepth = 0.0;
 
     public:
-        EquivalentCirculationDensityCalculation(double mw, double pl, double tvd);
+        EquivalentCirculatingDensityCalculation(double mudWeight, double pressureLoss, double trueVerticalDepth);
 
-        ~EquivalentCirculationDensityCalculation();
+        ~EquivalentCirculatingDensityCalculation();
 
         double CalculateECD() const;
     };
