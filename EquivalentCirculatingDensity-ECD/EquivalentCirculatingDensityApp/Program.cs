@@ -17,8 +17,21 @@ class Program
         Console.WriteLine($"ECD Result: {ecd} ppg");
     }
 
+    public static void ECDForwardCirculation()
+    {
+        double fludWeight = 12; // ppg
+        double frictionPressure = 1000; // psi
+        double measurementDepth = 10000; // ft
+
+        double ecd = CalculateECD(fludWeight, frictionPressure, measurementDepth);
+
+        Console.WriteLine($"ECD Forward Circulation: {ecd} ppg");
+    }
+
     static void Main()
     {
         Program.ECDResult();
+
+        Program.ECDForwardCirculation();
     }
 }
