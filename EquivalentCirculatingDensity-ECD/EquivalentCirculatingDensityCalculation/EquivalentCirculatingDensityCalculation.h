@@ -1,7 +1,7 @@
 #pragma once
 
-#ifndef ECD
-#define ECD
+#ifndef EquivalentCirculatingDensityCalculation_H
+#define EquivalentCirculatingDensityCalculation_H
 
 namespace EquivalentCirculatingDensity
 {
@@ -21,4 +21,4 @@ namespace EquivalentCirculatingDensity
     };
 }
 
-#endif // ECD
+#endif // EquivalentCirculatingDensityCalculation_H
