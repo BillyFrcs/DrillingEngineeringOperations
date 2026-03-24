@@ -1,15 +1,7 @@
 #include <iostream>
 #include <cmath>
 
-double feetToMeters(double feet)
-{
-    return feet * 0.3048;
-}
-
-double psiToBar(double psi)
-{
-    return psi * 0.0689476;
-}
+#include "../utils/conversions.hpp"
 
 int main()
 {
@@ -24,8 +16,7 @@ int main()
     std::cout << "np = " << std::abs(np) << std::endl;
     std::cout << "Kp = " << Kp << std::endl;
 
-    std::cout << "\n"
-              << std::endl;
+    std::cout << "\n" << std::endl;
 
     std::cout << "Surface Connection:" << std::endl;
 
@@ -51,7 +42,7 @@ int main()
 
     std::cout << "Friction Factor = " << fp << std::endl;
 
-    //  Pressure Lost
+    //  Pressure Loss
     double pp_psi = ((0.006025 * std::pow(560.23, 2) * 12.8) / (92916 * 3.826)) * 610;
 
     double bar = psiToBar(pp_psi);
