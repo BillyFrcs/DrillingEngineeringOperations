@@ -1,6 +1,6 @@
 <h1 align="center">Hydraulics Calculations Summary</h1>
 
-In this summary, present the results of various American Petroleum Institute (API) hydraulics calculations performed for a drilling operation. The calculations include pressure drops in different sections of the drilling system, such as the surface line, drill string intervals, and annular intervals.
+In this summary, present the results of various American Petroleum Institute (API) hydraulics calculations performed for a drilling rig operations. The calculations include pressure drops in different sections of the drilling system, such as the surface line, drill string intervals, and annular intervals.
 
 <h3 align="">API Hydraulics Equations</h3>
 
