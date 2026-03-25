@@ -17,8 +17,5 @@ double DrillingSystem::EquivalentCirculatingDensity::ImperialCalculation(double 
 
 double DrillingSystem::EquivalentCirculatingDensity::MetricCalculation(double mudWeight_sg, double pressureLoss_bar, double trueVerticalDepth_meter)
 {
-	// mudWeight -> kg/m^3
-	// pressureLoss -> kPa
-	// trueVerticalDepth -> m
 	return mudWeight_sg + (pressureLoss_bar * 1000 / 9.81 / trueVerticalDepth_meter);
 }
