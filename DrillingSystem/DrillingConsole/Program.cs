@@ -33,7 +33,7 @@ class Program
         IntPtr drillingEngine = CreateDrillingEngine();
 
         double mudWeight_sg = 1200; // sg or kg/m^3
-        double pressureLoss_bar = 2760; // bar
+        double pressureLoss_bar = 2760; // bar or kPa
         double trueVerticalDepth_meter = 2440; // meter
 
         double ecd = MetricEquivalentCirculatingDensityCalculation(drillingEngine, mudWeight_sg, pressureLoss_bar, trueVerticalDepth_meter);
