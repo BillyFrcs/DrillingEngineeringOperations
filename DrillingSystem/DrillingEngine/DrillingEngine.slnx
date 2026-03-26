@@ -1,7 +1,0 @@
-<Solution>
-  <Configurations>
-    <Platform Name="x64" />
-    <Platform Name="x86" />
-  </Configurations>
-  <Project Path="DrillingEngine.vcxproj" Id="09d80282-a104-4781-aac3-0f8704e7e541" />
-</Solution>

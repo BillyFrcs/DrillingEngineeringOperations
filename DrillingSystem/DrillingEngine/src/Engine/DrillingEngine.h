@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../Calculations/EquivalentCirculatingDensity.h"
+#include "../DrillingSystem.h"
 
 #ifndef DRILLING_ENGINE_H
 #define DRILLING_ENGINE_H

@@ -16,10 +16,10 @@ RUN curl -SL --output vs_buildtools.exe https://aka.ms/vs/17/release/vs_buildtoo
 RUN vs_buildtools.exe --installPath C:\BuildTools --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 Microsoft.VisualStudio.Component.Windows10SDK.19041 --quiet --wait --norestart --nocache
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["DrillingConsole.csproj", "."]
-RUN dotnet restore "./DrillingConsole.csproj"
+COPY ["DrillingConsole/DrillingConsole.csproj", "DrillingConsole/"]
+RUN dotnet restore "./DrillingConsole/DrillingConsole.csproj"
 COPY . .
-WORKDIR "/src/."
+WORKDIR "/src/DrillingConsole"
 RUN dotnet build "./DrillingConsole.csproj" -c %BUILD_CONFIGURATION% -o /app/build
 
 # This stage is used to publish the service project to be copied to the final stage

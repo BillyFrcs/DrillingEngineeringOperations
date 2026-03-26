@@ -13,44 +13,26 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\Engine">
-      <UniqueIdentifier>{519d092a-0399-42c7-93f4-677dc30bd3f8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Calculations">
-      <UniqueIdentifier>{cf6cc2a7-cb6e-4d96-a322-96f52a37a822}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Engine">
-      <UniqueIdentifier>{e1a8cb61-58b9-4c26-8076-f06c65c304ba}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Calculations">
-      <UniqueIdentifier>{db4b8f86-9ab1-47bd-b9ca-72bc0fd01ec4}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="src\Calculations\EquivalentCirculatingDensity.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Calculations\EquivalentCirculatingDensity.cpp">
-      <Filter>Source Files\Calculations</Filter>
+    <ClCompile Include="src\Engine\DrillingEngine.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Engine\DrillingEngine.cpp">
-      <Filter>Source Files\Engine</Filter>
-    </ClCompile>
-    <ClCompile Include="pch.cpp">
+    <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Engine\DrillingEngine.h">
-      <Filter>Header Files\Engine</Filter>
-    </ClInclude>
-    <ClInclude Include="Calculations\EquivalentCirculatingDensity.h">
-      <Filter>Header Files\Calculations</Filter>
-    </ClInclude>
-    <ClInclude Include="framework.h">
+    <ClInclude Include="src\Calculations\EquivalentCirculatingDensity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="pch.h">
+    <ClInclude Include="src\Engine\DrillingEngine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DrillingSystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

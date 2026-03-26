@@ -1,5 +1,4 @@
-#include <iostream>
-
+#include "DrillingSystem.h"
 #include "Engine/DrillingEngine.h"
 
 // C-Style Wrapper (Bridge) function using pointer
@@ -46,7 +45,7 @@ extern "C" __declspec(dllexport) double ImperialEquivalentCirculatingDensityCalc
 }
 */
 
-int main()
+int main(int argc, char** argv)
 {
 	auto drillingEngineUnique = std::make_unique<DrillingSystem::DrillingEngine>(); 
 

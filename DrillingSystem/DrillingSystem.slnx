@@ -1,0 +1,9 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="DrillingConsole/DrillingConsole.csproj" />
+  <Project Path="DrillingEngine/DrillingEngine.vcxproj" Id="6bfb466c-e85f-488a-9c8d-ef2268befc73" />
+</Solution>
