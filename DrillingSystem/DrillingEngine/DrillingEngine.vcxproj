@@ -126,6 +126,10 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy "$(TargetDir)*.dll" "..\DrillingConsole\bin\$(Configuration)\net10.0\" /Y
+xcopy "$(TargetDir)*.pdb" "..\DrillingConsole\bin\$(Configuration)\net10.0\" /Y</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
