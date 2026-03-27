@@ -7,7 +7,7 @@ namespace DrillingSystem
 	extern "C"
 	{
 		__declspec(dllexport)
-			DrillingSystem::DrillingEngine* CreateDrillingEngine(double neew)
+		DrillingSystem::DrillingEngine* CreateDrillingEngine(double neew)
 		{
 			auto drillingEngine = std::make_unique<DrillingSystem::DrillingEngine>();
 
@@ -17,19 +17,19 @@ namespace DrillingSystem
 		}
 
 		__declspec(dllexport)
-			double ImperialEquivalentCirculatingDensityCalculation(DrillingSystem::DrillingEngine* drillingEngine, double mudWeight_ppg, double pressureLoss_psi, double trueVerticalDepth_feet)
+		double ImperialEquivalentCirculatingDensityCalculation(DrillingSystem::DrillingEngine* drillingEngine, double mudWeight_ppg, double pressureLoss_psi, double trueVerticalDepth_feet)
 		{
 			return drillingEngine->ImperialEquivalentCirculatingDensity(mudWeight_ppg, pressureLoss_psi, trueVerticalDepth_feet);
 		}
 
 		__declspec(dllexport)
-			double MetricEquivalentCirculatingDensityCalculation(DrillingSystem::DrillingEngine* drillingEngine, double mudWeight_sg, double pressureLoss_bar, double trueVerticalDepth_meter)
+		double MetricEquivalentCirculatingDensityCalculation(DrillingSystem::DrillingEngine* drillingEngine, double mudWeight_sg, double pressureLoss_bar, double trueVerticalDepth_meter)
 		{
 			return drillingEngine->MetricEquivalentCirculatingDensity(mudWeight_sg, pressureLoss_bar, trueVerticalDepth_meter);
 		}
 
 		__declspec(dllexport)
-			void DestroyDrillingEngine(DrillingSystem::DrillingEngine* drillingEngine)
+		void DestroyDrillingEngine(DrillingSystem::DrillingEngine* drillingEngine)
 		{
 			std::unique_ptr<DrillingSystem::DrillingEngine> drillingEnginePtr(drillingEngine);
 
