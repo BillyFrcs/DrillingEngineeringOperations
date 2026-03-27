@@ -21,7 +21,7 @@
   <ItemGroup>
     <ClCompile Include="src\Calculations\EquivalentCirculatingDensity.cpp" />
     <ClCompile Include="src\Engine\DrillingEngine.cpp" />
-    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\DrillingSystem.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Calculations\EquivalentCirculatingDensity.h" />
