@@ -46,6 +46,10 @@ namespace DrillingSystem.Services
             }
         }
 
+        ~EquivalentCirculatingDensityService()
+        {
+        }
+
         public void ImperialEquivalentCirculatingDensityResult()
         {
             IntPtr ecdEngine = CreateEquivalentCirculatingDensity();

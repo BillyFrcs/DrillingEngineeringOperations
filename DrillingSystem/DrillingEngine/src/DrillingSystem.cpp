@@ -7,7 +7,7 @@ namespace DrillingSystem
 	extern "C"
 	{
 		__declspec(dllexport)
-		DrillingSystem::DrillingEngine* CreateDrillingEngine(double neew)
+		DrillingSystem::DrillingEngine* CreateDrillingEngine()
 		{
 			auto drillingEngine = std::make_unique<DrillingSystem::DrillingEngine>();
 
