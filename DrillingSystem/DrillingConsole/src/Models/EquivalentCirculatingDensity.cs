@@ -1,7 +1,8 @@
-﻿using DrillingSystem.Interfaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
+
+using DrillingSystem.Interfaces;
 
 namespace DrillingSystem.Models
 {

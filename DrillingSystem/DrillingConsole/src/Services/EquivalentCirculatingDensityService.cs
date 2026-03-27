@@ -46,26 +46,40 @@ namespace DrillingSystem.Services
             }
         }
 
+        private static IntPtr CreateEquivalentCirculatingDensity()
+        {
+            return CreateDrillingEngine();
+        }
+
+        private static void DestroyEquivalentCirculatingDensity(IntPtr ecdEngine)
+        {
+            DestroyDrillingEngine(ecdEngine);
+        }
+
         public void ImperialEquivalentCirculatingDensityResult()
         {
-            IntPtr drillingEngine = CreateDrillingEngine();
+            IntPtr ecdEngine = CreateEquivalentCirculatingDensity();
 
-            double ecd = ImperialEquivalentCirculatingDensityCalculation(drillingEngine, EcdModel.MudWeightPpg, EcdModel.PressureLossPsi, EcdModel.TrueVerticalDepthFeet);
+            ObjectDisposedException.ThrowIf(ecdEngine == IntPtr.Zero, nameof(ecdEngine));
 
-            Console.WriteLine($"Imperial ECD Result: {ecd} ppg");
+            double imperialEcd = ImperialEquivalentCirculatingDensityCalculation(ecdEngine, EcdModel.MudWeightPpg, EcdModel.PressureLossPsi, EcdModel.TrueVerticalDepthFeet);
 
-            DestroyDrillingEngine(drillingEngine);
+            Console.WriteLine($"Imperial ECD Result: {imperialEcd} ppg");
+
+            DestroyEquivalentCirculatingDensity(ecdEngine);
         }
 
         public void MetricEquivalentCirculatingDensityResult()
         {
-            IntPtr drillingEngine = CreateDrillingEngine();
+            IntPtr ecdEngine = CreateEquivalentCirculatingDensity();
 
-            double ecd = MetricEquivalentCirculatingDensityCalculation(drillingEngine, EcdModel.MudWeightSg, EcdModel.PressureLossBar, EcdModel.TrueVerticalDepthMeter);
+            ObjectDisposedException.ThrowIf(ecdEngine == IntPtr.Zero, nameof(ecdEngine));
 
-            Console.WriteLine($"Metric ECD Result: {ecd} sg");
+            double metricEcd = MetricEquivalentCirculatingDensityCalculation(ecdEngine, EcdModel.MudWeightSg, EcdModel.PressureLossBar, EcdModel.TrueVerticalDepthMeter);
 
-            DestroyDrillingEngine(drillingEngine);
+            Console.WriteLine($"Metric ECD Result: {metricEcd} sg");
+
+            DestroyEquivalentCirculatingDensity(ecdEngine);
         }
     }
 }
