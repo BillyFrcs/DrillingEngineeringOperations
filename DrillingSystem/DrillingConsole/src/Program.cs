@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-using DrillingSystem.Core.Interfaces;
-using DrillingSystem.Core.Services;
+using DrillingSystem.Services;
+using DrillingSystem.Interfaces;
 
 namespace DrillingSystem
 {
@@ -10,13 +10,13 @@ namespace DrillingSystem
     {
         static void Main(string[] args)
         {
-            EquivalentCirculatingDensityService ecdService = new();
+            EquivalentCirculatingDensityService EcdService = new();
 
             // IEquivalentCirculatingDensity ecd = new EquivalentCirculatingDensityService();
 
-            ecdService.ImperialEquivalentCirculatingDensityResult();
+            EcdService.ImperialEquivalentCirculatingDensityResult();
 
-            ecdService.MetricEquivalentCirculatingDensityResult();
+            EcdService.MetricEquivalentCirculatingDensityResult();
         }
     }
 }

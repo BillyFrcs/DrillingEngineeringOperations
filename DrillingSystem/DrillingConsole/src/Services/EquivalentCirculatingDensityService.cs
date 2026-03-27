@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Text;
 
-using DrillingSystem.Core.Interfaces;
+using DrillingSystem.Interfaces;
+using DrillingSystem.Models;
 
-namespace DrillingSystem.Core.Services
+namespace DrillingSystem.Services
 {
     internal class EquivalentCirculatingDensityService : IEquivalentCirculatingDensity
     {
@@ -21,15 +22,35 @@ namespace DrillingSystem.Core.Services
         [DllImport("DrillingEngine.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern void DestroyDrillingEngine(IntPtr drillingEngine);
 
+        private EquivalentCirculatingDensity EcdModel;
+
+        public EquivalentCirculatingDensityService()
+        {
+            if (EcdModel == null)
+            {
+                // EcdModel = new();
+
+                EcdModel = new EquivalentCirculatingDensity
+                {
+                    MudWeightPpg = 12.2,
+                    PressureLossPsi = 400,
+                    TrueVerticalDepthFeet = 12000,
+                    MudWeightSg = 1200,
+                    PressureLossBar = 2760,
+                    TrueVerticalDepthMeter = 2440
+                };
+            }
+            else
+            {
+                throw new InvalidOperationException("EquivalentCirculatingDensity model is already initialized.");
+            }
+        }
+
         public void ImperialEquivalentCirculatingDensityResult()
         {
             IntPtr drillingEngine = CreateDrillingEngine();
 
-            double mudWeight_ppg = 12.2; // ppg
-            double pressureLoss_psi = 400; // psi
-            double trueVerticalDepth_feet = 12000; // feet
-
-            double ecd = ImperialEquivalentCirculatingDensityCalculation(drillingEngine, mudWeight_ppg, pressureLoss_psi, trueVerticalDepth_feet);
+            double ecd = ImperialEquivalentCirculatingDensityCalculation(drillingEngine, EcdModel.MudWeightPpg, EcdModel.PressureLossPsi, EcdModel.TrueVerticalDepthFeet);
 
             Console.WriteLine($"Imperial ECD Result: {ecd} ppg");
 
@@ -40,11 +61,7 @@ namespace DrillingSystem.Core.Services
         {
             IntPtr drillingEngine = CreateDrillingEngine();
 
-            double mudWeight_sg = 1200; // sg or kg/m^3
-            double pressureLoss_bar = 2760; // bar or kPa
-            double trueVerticalDepth_meter = 2440; // meter
-
-            double ecd = MetricEquivalentCirculatingDensityCalculation(drillingEngine, mudWeight_sg, pressureLoss_bar, trueVerticalDepth_meter);
+            double ecd = MetricEquivalentCirculatingDensityCalculation(drillingEngine, EcdModel.MudWeightSg, EcdModel.PressureLossBar, EcdModel.TrueVerticalDepthMeter);
 
             Console.WriteLine($"Metric ECD Result: {ecd} sg");
 
