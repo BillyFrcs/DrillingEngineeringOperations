@@ -46,16 +46,6 @@ namespace DrillingSystem.Services
             }
         }
 
-        private static IntPtr CreateEquivalentCirculatingDensity()
-        {
-            return CreateDrillingEngine();
-        }
-
-        private static void DestroyEquivalentCirculatingDensity(IntPtr ecdEngine)
-        {
-            DestroyDrillingEngine(ecdEngine);
-        }
-
         public void ImperialEquivalentCirculatingDensityResult()
         {
             IntPtr ecdEngine = CreateEquivalentCirculatingDensity();
@@ -80,6 +70,16 @@ namespace DrillingSystem.Services
             Console.WriteLine($"Metric ECD Result: {metricEcd} sg");
 
             DestroyEquivalentCirculatingDensity(ecdEngine);
+        }
+
+        private static IntPtr CreateEquivalentCirculatingDensity()
+        {
+            return CreateDrillingEngine();
+        }
+
+        private static void DestroyEquivalentCirculatingDensity(IntPtr ecdEngine)
+        {
+            DestroyDrillingEngine(ecdEngine);
         }
     }
 }
