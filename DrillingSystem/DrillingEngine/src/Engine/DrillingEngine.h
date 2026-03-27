@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../DrillingSystem.h"
+#include "DrillingSystem.h"
 
 #ifndef DRILLING_ENGINE_H
 #define DRILLING_ENGINE_H
