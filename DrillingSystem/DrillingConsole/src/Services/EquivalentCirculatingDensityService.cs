@@ -22,15 +22,15 @@ namespace DrillingSystem.Services
         [DllImport("DrillingEngine.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern void DestroyDrillingEngine(IntPtr drillingEngine);
 
-        private EquivalentCirculatingDensity EcdModel;
+        private EquivalentCirculatingDensity _ecdModel;
 
         public EquivalentCirculatingDensityService()
         {
-            if (EcdModel == null)
+            if (_ecdModel == null)
             {
                 // EcdModel = new();
 
-                EcdModel = new EquivalentCirculatingDensity
+                _ecdModel = new EquivalentCirculatingDensity
                 {
                     MudWeightPpg = 12.2,
                     PressureLossPsi = 400,
@@ -55,8 +55,8 @@ namespace DrillingSystem.Services
             IntPtr ecdEngine = CreateEquivalentCirculatingDensity();
 
             ObjectDisposedException.ThrowIf(ecdEngine == IntPtr.Zero, nameof(ecdEngine));
-
-            double imperialEcd = ImperialEquivalentCirculatingDensityCalculation(ecdEngine, EcdModel.MudWeightPpg, EcdModel.PressureLossPsi, EcdModel.TrueVerticalDepthFeet);
+                                                                                                                                             
+            double imperialEcd = ImperialEquivalentCirculatingDensityCalculation(ecdEngine, _ecdModel.MudWeightPpg, _ecdModel.PressureLossPsi, _ecdModel.TrueVerticalDepthFeet);
 
             Console.WriteLine($"Imperial ECD Result: {imperialEcd} ppg");
 
@@ -69,7 +69,7 @@ namespace DrillingSystem.Services
 
             ObjectDisposedException.ThrowIf(ecdEngine == IntPtr.Zero, nameof(ecdEngine));
 
-            double metricEcd = MetricEquivalentCirculatingDensityCalculation(ecdEngine, EcdModel.MudWeightSg, EcdModel.PressureLossBar, EcdModel.TrueVerticalDepthMeter);
+            double metricEcd = MetricEquivalentCirculatingDensityCalculation(ecdEngine, _ecdModel.MudWeightSg, _ecdModel.PressureLossBar, _ecdModel.TrueVerticalDepthMeter);
 
             Console.WriteLine($"Metric ECD Result: {metricEcd} sg \n");
 
