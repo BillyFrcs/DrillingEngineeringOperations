@@ -33,7 +33,7 @@ namespace DrillingSystem
 		{
 			std::unique_ptr<DrillingSystem::DrillingEngine> drillingEnginePtr(drillingEngine);
 
-			// delete drillingEngine;
+			// delete drillingEnginePtr;
 		}
 	}
 
@@ -50,7 +50,7 @@ namespace DrillingSystem
 
 int main(int argc, char** argv)
 {
-	auto drillingEngineUnique = std::make_unique<DrillingSystem::DrillingEngine>(); 
+	auto drillingEngineUnique = std::make_unique<DrillingSystem::DrillingEngine>();
 
 	drillingEngineUnique.release();
 

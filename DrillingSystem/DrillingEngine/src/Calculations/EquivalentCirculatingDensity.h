@@ -10,13 +10,18 @@ namespace DrillingSystem
 	class EquivalentCirculatingDensity
 	{
 	public:
-		EquivalentCirculatingDensity();
+		EquivalentCirculatingDensity(double mudWeight, double pressureLoss, double trueVerticalDepth);
 
 		~EquivalentCirculatingDensity();
 
-		static double ImperialCalculation(double mudWeight_ppg, double pressureLoss_psi, double trueVerticalDepth_feet);
+		double ImperialCalculation();
 		
-		static double MetricCalculation(double mudWeight_sg, double pressureLoss_bar, double trueVerticalDepth_meter);
+		double MetricCalculation();
+
+	private:
+		double m_MudWeight;
+		double m_PressureLoss;
+		double m_TrueVerticalDepth;
 	};
 }
 

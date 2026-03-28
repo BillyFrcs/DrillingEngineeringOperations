@@ -1,21 +1,24 @@
 #include "EquivalentCirculatingDensity.h"
 
-DrillingSystem::EquivalentCirculatingDensity::EquivalentCirculatingDensity()
+DrillingSystem::EquivalentCirculatingDensity::EquivalentCirculatingDensity(double mudWeight, double pressureLoss, double trueVerticalDepth)
 {
+	m_MudWeight = mudWeight;
+	m_PressureLoss = pressureLoss;
+	m_TrueVerticalDepth = trueVerticalDepth;
 }
 
 DrillingSystem::EquivalentCirculatingDensity::~EquivalentCirculatingDensity()
 {
 }
 
-double DrillingSystem::EquivalentCirculatingDensity::ImperialCalculation(double mudWeight_ppg, double pressureLoss_psi, double trueVerticalDepth_feet)
+double DrillingSystem::EquivalentCirculatingDensity::ImperialCalculation()
 {
-	return mudWeight_ppg + (pressureLoss_psi / (0.052 * trueVerticalDepth_feet));
+	return m_MudWeight + (m_PressureLoss / (0.052 * m_TrueVerticalDepth));
 
-	// Another imperial ECD formula is (pressureLoss_psi / 0.052 / trueVerticalDepth_feet) + mudWeight_ppg;
+	// Another imperial ECD formula is m_MudWeight + (m_PressureLoss / 0.052 / m_TrueVerticalDepth);
 }
 
-double DrillingSystem::EquivalentCirculatingDensity::MetricCalculation(double mudWeight_sg, double pressureLoss_bar, double trueVerticalDepth_meter)
+double DrillingSystem::EquivalentCirculatingDensity::MetricCalculation()
 {
-	return mudWeight_sg + (pressureLoss_bar * 1000 / 9.81 / trueVerticalDepth_meter);
+	return m_MudWeight + (m_PressureLoss * 1000 / 9.81 / m_TrueVerticalDepth);
 }
