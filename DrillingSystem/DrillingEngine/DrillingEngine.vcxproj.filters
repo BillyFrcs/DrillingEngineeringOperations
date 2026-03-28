@@ -24,6 +24,9 @@
     <ClCompile Include="src\DrillingSystem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Calculations\HydrostaticPressure.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Calculations\EquivalentCirculatingDensity.h">
@@ -33,6 +36,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\DrillingSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Calculations\HydrostaticPressure.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -71,7 +71,7 @@ namespace DrillingSystem.Services
 
             double metricEcd = MetricEquivalentCirculatingDensityCalculation(ecdEngine, EcdModel.MudWeightSg, EcdModel.PressureLossBar, EcdModel.TrueVerticalDepthMeter);
 
-            Console.WriteLine($"Metric ECD Result: {metricEcd} sg");
+            Console.WriteLine($"Metric ECD Result: {metricEcd} sg \n");
 
             DestroyEquivalentCirculatingDensity(ecdEngine);
         }
