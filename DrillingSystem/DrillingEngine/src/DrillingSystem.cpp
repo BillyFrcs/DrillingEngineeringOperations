@@ -64,7 +64,7 @@ int main(int argc, char** argv)
 {
 	DrillingSystem::DrillingEngine* drillingEngine = nullptr;
 
-	drillingEngine = DrillingSystem::CreateDrillingEngine();
+	drillingEngine = DrillingSystem::DrillingEngine::CreateDrillingEngine();
 
 	// DEBUG: Check if the pointer is null before using it
 	std::clog << drillingEngine->ImperialEquivalentCirculatingDensity(12.2, 400, 12000) << std::endl;

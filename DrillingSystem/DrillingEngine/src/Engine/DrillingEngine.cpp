@@ -8,7 +8,7 @@ DrillingSystem::DrillingEngine::~DrillingEngine()
 {
 }
 
-static DrillingSystem::DrillingEngine* CreateDrillingEngine()
+DrillingSystem::DrillingEngine* DrillingSystem::DrillingEngine::CreateDrillingEngine()
 {
 	auto drillingEngine = std::make_unique<DrillingSystem::DrillingEngine>();
 
