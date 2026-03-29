@@ -62,11 +62,9 @@ namespace DrillingSystem
 
 int main(int argc, char** argv)
 {
-	auto drillingEngineUnique = std::make_unique<DrillingSystem::DrillingEngine>();
-
-	drillingEngineUnique.release();
-
 	DrillingSystem::DrillingEngine* drillingEngine = nullptr;
+
+	drillingEngine = DrillingSystem::CreateDrillingEngine();
 
 	// DEBUG: Check if the pointer is null before using it
 	std::clog << drillingEngine->ImperialEquivalentCirculatingDensity(12.2, 400, 12000) << std::endl;
@@ -75,7 +73,7 @@ int main(int argc, char** argv)
 	std::clog << drillingEngine->ImperialHydrostaticPressure(12.2, 12000) << std::endl;
 	std::clog << drillingEngine->MetricHydrostaticPressure(1200, 2440) << std::endl;
 
-	std::unique_ptr<DrillingSystem::DrillingEngine> drillingEnginePtr(drillingEngine);
+	drillingEngine->DestroyDrillingEngine(drillingEngine);
 
 	/*
 	// Default object instantiation and method calls
