@@ -27,7 +27,7 @@
     <ClCompile Include="src\Calculations\HydrostaticPressure.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Debug\Application.cpp">
+    <ClCompile Include="src\Tests\Application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -44,7 +44,7 @@
     <ClInclude Include="src\Calculations\HydrostaticPressure.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Debug\Application.h">
+    <ClInclude Include="src\Tests\Application.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
