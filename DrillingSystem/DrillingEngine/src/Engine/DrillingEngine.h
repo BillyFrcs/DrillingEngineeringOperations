@@ -14,7 +14,7 @@ namespace DrillingSystem
 
         ~DrillingEngine();
 
-        static DrillingEngine* CreateDrillingEngine();
+        static DrillingEngine* Create();
 
         double ImperialEquivalentCirculatingDensity(double mudWeight_ppg, double pressureLoss_psi, double trueVerticalDepth_feet);
 
@@ -24,7 +24,7 @@ namespace DrillingSystem
 
         double MetricHydrostaticPressure(double mudWeight_sg, double trueVerticalDepth_meter);
 
-        void DestroyDrillingEngine(DrillingEngine* drillingEngine);
+        void Destroy(DrillingEngine* drillingEngine);
 	};
 }
 

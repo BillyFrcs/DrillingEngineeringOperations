@@ -19,12 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Debug\Application.cpp" />
     <ClCompile Include="src\Calculations\HydrostaticPressure.cpp" />
     <ClCompile Include="src\Calculations\EquivalentCirculatingDensity.cpp" />
     <ClCompile Include="src\Engine\DrillingEngine.cpp" />
     <ClCompile Include="src\DrillingSystem.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Debug\Application.h" />
     <ClInclude Include="src\Calculations\HydrostaticPressure.h" />
     <ClInclude Include="src\Calculations\EquivalentCirculatingDensity.h" />
     <ClInclude Include="src\DrillingSystem.h" />

@@ -8,7 +8,7 @@ DrillingSystem::DrillingEngine::~DrillingEngine()
 {
 }
 
-DrillingSystem::DrillingEngine* DrillingSystem::DrillingEngine::CreateDrillingEngine()
+DrillingSystem::DrillingEngine* DrillingSystem::DrillingEngine::Create()
 {
 	auto drillingEngine = std::make_unique<DrillingSystem::DrillingEngine>();
 
@@ -51,7 +51,7 @@ double DrillingSystem::DrillingEngine::MetricHydrostaticPressure(double mudWeigh
 	hp.release();
 }
 
-void DrillingSystem::DrillingEngine::DestroyDrillingEngine(DrillingEngine* drillingEngine)
+void DrillingSystem::DrillingEngine::Destroy(DrillingEngine* drillingEngine)
 {
 	std::unique_ptr<DrillingSystem::DrillingEngine> drillingEnginePtr(drillingEngine);
 }

@@ -1,5 +1,4 @@
 #include "DrillingSystem.h"
-#include "Engine/DrillingEngine.h"
 
 // C-Style Wrapper (Bridge) function using pointer
 namespace DrillingSystem
@@ -62,26 +61,7 @@ namespace DrillingSystem
 
 int main(int argc, char** argv)
 {
-	DrillingSystem::DrillingEngine* drillingEngine = nullptr;
-
-	drillingEngine = DrillingSystem::DrillingEngine::CreateDrillingEngine();
-
-	// DEBUG: Check if the pointer is null before using it
-	std::clog << drillingEngine->ImperialEquivalentCirculatingDensity(12.2, 400, 12000) << std::endl;
-	std::clog << drillingEngine->MetricEquivalentCirculatingDensity(1200, 2760, 2440) << std::endl;
-
-	std::clog << drillingEngine->ImperialHydrostaticPressure(12.2, 12000) << std::endl;
-	std::clog << drillingEngine->MetricHydrostaticPressure(1200, 2440) << std::endl;
-
-	drillingEngine->DestroyDrillingEngine(drillingEngine);
-
-	/*
-	// Default object instantiation and method calls
-	DrillingSystem::DrillingEngine drillingEngine;
-
-	std::cout << drillingEngine.ImperialEquivalentCirculatingDensity(12.2, 400, 12000) << std::endl;
-	std::cout << drillingEngine.MetricEquivalentCirculatingDensity(1200, 2760, 2440) << std::endl;
-	*/
+	DrillingSystem::Application::Run();
 
 	return EXIT_SUCCESS;
 }

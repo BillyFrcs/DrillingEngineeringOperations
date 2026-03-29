@@ -7,3 +7,4 @@
 #include "Engine/DrillingEngine.h"
 #include "Calculations/EquivalentCirculatingDensity.h"
 #include "Calculations/HydrostaticPressure.h"
+#include "Debug/Application.h"
