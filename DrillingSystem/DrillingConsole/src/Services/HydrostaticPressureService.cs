@@ -66,7 +66,7 @@ namespace DrillingSystem.Services
 
             double metricHP = MetricHydrostaticPressureCalculation(hpEngine, _hydrostaticPressureModel.MudWeightSg, _hydrostaticPressureModel.TrueVerticalDepthMeter);
 
-            Console.WriteLine($"Metric Hydrostatic Pressure Result: {metricHP} bar");
+            Console.WriteLine($"Metric Hydrostatic Pressure Result: {metricHP} bar \n");
 
             DestroyHydrostaticPressure(hpEngine);
         }
