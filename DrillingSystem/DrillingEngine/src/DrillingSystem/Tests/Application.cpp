@@ -10,7 +10,8 @@ DrillingSystem::Application::~Application()
 
 void DrillingSystem::Application::Run()
 {
-	DrillingSystem::DrillingEngine* drillingEngine = DrillingSystem::DrillingEngine::Create();
+	DrillingSystem::DrillingEngine de;
+	DrillingSystem::DrillingEngine* drillingEngine = de.Create();
 
 	// DEBUG: Check if the pointer is null before using it
 	std::clog << drillingEngine->ImperialEquivalentCirculatingDensity(12.2, 400, 12000) << std::endl;

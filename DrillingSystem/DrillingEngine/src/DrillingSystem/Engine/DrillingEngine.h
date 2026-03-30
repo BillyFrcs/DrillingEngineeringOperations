@@ -1,6 +1,9 @@
 #pragma once
 
-#include "DrillingSystem.h"
+#include <memory>
+
+#include "DrillingSystem/Calculations/EquivalentCirculatingDensity.h"
+#include "DrillingSystem/Calculations/HydrostaticPressure.h"
 
 #ifndef DRILLING_ENGINE_H
 #define DRILLING_ENGINE_H
@@ -14,7 +17,7 @@ namespace DrillingSystem
 
         ~DrillingEngine();
 
-        static DrillingEngine* Create();
+        DrillingEngine* Create();
 
         double ImperialEquivalentCirculatingDensity(double mudWeight_ppg, double pressureLoss_psi, double trueVerticalDepth_feet);
 

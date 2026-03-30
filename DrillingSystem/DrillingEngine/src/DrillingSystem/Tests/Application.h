@@ -1,6 +1,9 @@
 #pragma once
 
-#include "DrillingSystem.h"
+#include <iostream>
+#include <cmath>
+
+#include "DrillingSystem/Engine/DrillingEngine.h"
 
 #ifndef APPLICATION_H
 #define APPLICATION_H

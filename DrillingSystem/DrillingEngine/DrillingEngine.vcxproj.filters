@@ -15,36 +15,33 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Calculations\EquivalentCirculatingDensity.cpp">
+    <ClCompile Include="src\DrillingSystem\Calculations\EquivalentCirculatingDensity.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Engine\DrillingEngine.cpp">
+    <ClCompile Include="src\DrillingSystem\Engine\DrillingEngine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\DrillingSystem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Calculations\HydrostaticPressure.cpp">
+    <ClCompile Include="src\DrillingSystem\Calculations\HydrostaticPressure.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Tests\Application.cpp">
+    <ClCompile Include="src\DrillingSystem\Tests\Application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Calculations\EquivalentCirculatingDensity.h">
+    <ClInclude Include="src\DrillingSystem\Calculations\EquivalentCirculatingDensity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Engine\DrillingEngine.h">
+    <ClInclude Include="src\DrillingSystem\Engine\DrillingEngine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\DrillingSystem.h">
+    <ClInclude Include="src\DrillingSystem\Calculations\HydrostaticPressure.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Calculations\HydrostaticPressure.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Tests\Application.h">
+    <ClInclude Include="src\DrillingSystem\Tests\Application.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

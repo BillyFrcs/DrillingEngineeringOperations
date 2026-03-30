@@ -19,18 +19,17 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Tests\Application.cpp" />
-    <ClCompile Include="src\Calculations\HydrostaticPressure.cpp" />
-    <ClCompile Include="src\Calculations\EquivalentCirculatingDensity.cpp" />
-    <ClCompile Include="src\Engine\DrillingEngine.cpp" />
+    <ClCompile Include="src\DrillingSystem\Tests\Application.cpp" />
+    <ClCompile Include="src\DrillingSystem\Calculations\HydrostaticPressure.cpp" />
+    <ClCompile Include="src\DrillingSystem\Calculations\EquivalentCirculatingDensity.cpp" />
+    <ClCompile Include="src\DrillingSystem\Engine\DrillingEngine.cpp" />
     <ClCompile Include="src\DrillingSystem.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Tests\Application.h" />
-    <ClInclude Include="src\Calculations\HydrostaticPressure.h" />
-    <ClInclude Include="src\Calculations\EquivalentCirculatingDensity.h" />
-    <ClInclude Include="src\DrillingSystem.h" />
-    <ClInclude Include="src\Engine\DrillingEngine.h" />
+    <ClInclude Include="src\DrillingSystem\Tests\Application.h" />
+    <ClInclude Include="src\DrillingSystem\Calculations\HydrostaticPressure.h" />
+    <ClInclude Include="src\DrillingSystem\Calculations\EquivalentCirculatingDensity.h" />
+    <ClInclude Include="src\DrillingSystem\Engine\DrillingEngine.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
@@ -85,8 +84,11 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <OutDir>$(SolutionDir)\DrillingEngine\bin\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(ShortProjectName)\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)\DrillingEngine\bin\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -95,7 +97,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)DrillingEngine\src;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)DrillingEngine\src\;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -124,7 +126,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)DrillingEngine\src;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)DrillingEngine\src\;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

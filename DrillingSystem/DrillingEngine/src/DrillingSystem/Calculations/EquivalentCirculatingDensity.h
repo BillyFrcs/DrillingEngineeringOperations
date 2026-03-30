@@ -1,7 +1,5 @@
 #pragma once
 
-#include "DrillingSystem.h"
-
 #ifndef EQUIVALENT_CIRCULATING_DENSITY_H
 #define EQUIVALENT_CIRCULATING_DENSITY_H
 
