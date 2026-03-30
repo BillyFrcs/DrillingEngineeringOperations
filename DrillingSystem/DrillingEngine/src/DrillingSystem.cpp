@@ -1,5 +1,5 @@
 #include "DrillingSystem/Engine/DrillingEngine.h"
-#include "DrillingSystem/Tests/Application.h"
+#include "DrillingSystem/Logging/Debug.h"
 
 // C-Style Wrapper (Bridge) function using pointer
 extern "C"
@@ -79,7 +79,7 @@ extern "C" __declspec(dllexport) double ImperialEquivalentCirculatingDensityCalc
 
 int main(int argc, char** argv)
 {
-	DrillingSystem::Application::Run();
+	DrillingSystem::Debug::Run();
 
 	return EXIT_SUCCESS;
 }

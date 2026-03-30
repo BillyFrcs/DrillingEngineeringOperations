@@ -10,12 +10,12 @@
 
 namespace DrillingSystem
 {
-	class Application
+	class Debug
 	{
 	public:
-		Application();
+		Debug();
 
-		~Application();
+		~Debug();
 
 		static void Run();
 	};

@@ -1,14 +1,14 @@
-#include "Application.h"
+#include "Debug.h"
 
-DrillingSystem::Application::Application()
+DrillingSystem::Debug::Debug()
 {
 }
 
-DrillingSystem::Application::~Application()
+DrillingSystem::Debug::~Debug()
 {
 }
 
-void DrillingSystem::Application::Run()
+void DrillingSystem::Debug::Run()
 {
 	DrillingSystem::DrillingEngine de;
 	DrillingSystem::DrillingEngine* drillingEngine = de.Create();

@@ -27,7 +27,7 @@
     <ClCompile Include="src\DrillingSystem\Calculations\HydrostaticPressure.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\DrillingSystem\Tests\Application.cpp">
+    <ClCompile Include="src\DrillingSystem\Logging\Debug.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -41,7 +41,7 @@
     <ClInclude Include="src\DrillingSystem\Calculations\HydrostaticPressure.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\DrillingSystem\Tests\Application.h">
+    <ClInclude Include="src\DrillingSystem\Logging\Debug.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
