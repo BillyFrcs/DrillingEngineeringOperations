@@ -1,5 +1,3 @@
-import math
-
 """
 Pressure Losses Calculations in PSI and BAR
 """
