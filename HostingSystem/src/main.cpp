@@ -1,7 +1,8 @@
 #include <iostream>
 #include <iomanip>
+#include <print>
 
-long double TotalHookLoad()
+long double HookLoad1()
 {
     long double buoyedWeight = 260000;
     long double blockHookWeight = 40000;
@@ -13,7 +14,7 @@ long double TotalHookLoad()
 
 long double FastLineTension()
 {
-    long double totalHookLoad_W = TotalHookLoad();
+    long double totalHookLoad_W = HookLoad1();
     long double noLines = 10;
     long double efficiency = 0.811;
 
@@ -24,7 +25,7 @@ long double FastLineTension()
 
 long double DeadLineTension()
 {
-    long double totalHookLoad_W = TotalHookLoad();
+    long double totalHookLoad_W = HookLoad1();
     long double linesEfficiency = 10;
 
     long double deadLineTension_Td = totalHookLoad_W / linesEfficiency;
@@ -35,7 +36,7 @@ long double DeadLineTension()
 long double DerrickLoadUnderDynamicConditions()
 {
     long double totalFastLineTension_Tt = FastLineTension();
-    long double totalHookLoad_W = TotalHookLoad();
+    long double totalHookLoad_W = HookLoad1();
     long double totalDeadLineTension_Td = DeadLineTension();
 
     long double derrickLoad_fd = totalFastLineTension_Tt + totalHookLoad_W + totalDeadLineTension_Td;
@@ -186,7 +187,7 @@ long double DrillStringWeightInMud()
     return calculate;
 }
 
-long double HookLoad()
+long double HookLoad2()
 {
     long double weightOfStringInMud = DrillStringWeightInMud();
     long double weightOfTravelingBlock = 23500;
@@ -198,7 +199,7 @@ long double HookLoad()
 
 long double DeadLineLoad()
 {
-    long double hookLoadWeight = HookLoad();
+    long double hookLoadWeight = HookLoad2();
     long double KN = std::pow(0.9615, 10);
     long double N = 10;
     long double E = 0.811;
@@ -208,9 +209,9 @@ long double DeadLineLoad()
     return std::ceil(calculate);
 }
 
-long double FastLineLoad()
+long double FastLineLoad1()
 {
-    long double W = HookLoad();
+    long double W = HookLoad2();
     long double N = 10;
     long double E = 0.811;
 
@@ -221,9 +222,9 @@ long double FastLineLoad()
 
 long double DynamicCrownLoad()
 {
-    long double hookLoad = HookLoad();
+    long double hookLoad = HookLoad2();
     long double dealLineLoad = DeadLineLoad();
-    long double fastLineLoad = FastLineLoad();
+    long double fastLineLoad = FastLineLoad1();
 
     long double calculate = hookLoad + dealLineLoad + fastLineLoad;
 
@@ -233,16 +234,125 @@ long double DynamicCrownLoad()
 long double DesignFactor()
 {
     long double breakingStrength = 228000;
-    long double fastLineLoad = FastLineLoad();
+    long double fastLineLoad = FastLineLoad1();
 
     long double calculate = breakingStrength / fastLineLoad;
 
     return calculate;
 }
 
+long double WeightOfCasingInMudWhenRunningCasing()
+{
+    // 7" Casing run
+    long double holeDepth = 10000;
+    long double designFactorWhenRunningCasing = 29;
+    long double bouyancyFactor = 0.847;
+
+    long double calculate = holeDepth * designFactorWhenRunningCasing * bouyancyFactor;
+
+    return calculate;
+}
+
+long double HookLoadWhenRunningCasing()
+{
+    // 7" Casing run
+    long double weightOfCasingInMud = WeightOfCasingInMudWhenRunningCasing();
+    long double weightOfTravelingBlock = 23500;
+
+    long double calculate = weightOfCasingInMud + weightOfTravelingBlock;
+
+    return std::ceil(calculate);
+}
+
+long double FastLineLoadWhenRunningCasing()
+{
+    // 7" Casing run
+    long double hookLoad = HookLoadWhenRunningCasing();
+    long double N = 10;
+    long double E = 0.811;
+
+    long double calculate = hookLoad / (N * E);
+
+    return std::ceil(calculate);
+}
+
+long double DesignFactorWhenRunningCasing()
+{
+    // 7" Casing run
+    long double breakingStrength = 228000;
+    long double fastLineLoad = FastLineLoadWhenRunningCasing();
+
+    long double calculate = breakingStrength / fastLineLoad;
+
+    return calculate;
+}
+
+long double HookLoadVelocity()
+{
+    return 120;
+}
+
+long double PowerAtDrum()
+{
+    long double hookLoad = 500000;
+    long double hookLoadVelocity = HookLoadVelocity();
+    long double EF = 0.811;
+    long double horsePower = 33000;
+
+    long double calculate = (hookLoad * hookLoadVelocity) / EF / horsePower;
+
+    return calculate;
+}
+
+long double MotorPower()
+{
+    long double powerAtDrum = PowerAtDrum();
+    long double motorEfficiency = 0.88;
+    
+    long double calculate = powerAtDrum / motorEfficiency;
+    
+    return calculate;
+}
+
+long double MarketDataMotorPower()
+{
+    return 3000;
+}
+
+long double FastLineSpeed()
+{
+    long double N = 10;
+    long double hookLoadSpeed = HookLoadVelocity();
+    
+    long double Vf = N * hookLoadSpeed;
+    
+    return Vf;
+}
+
+long double DrumSpeed()
+{
+    long double fastLineSpeed = FastLineSpeed();
+    long double Pi = 3.14;
+    long double hoistingDrumDiameter = 32.0 / 2.0 / 12.0; // Convert inches to feet
+
+    long double calculate = fastLineSpeed / (2 * Pi * (hoistingDrumDiameter));
+
+    return calculate;
+}
+
+long double GearRatio()
+{
+    long double motorSpeed = 1200;
+    long double drumSpeed = DrumSpeed();
+
+    long double calculate = motorSpeed / drumSpeed;
+
+    return calculate;
+}
+
 int main(int argc, char* argv[]) 
 {
-    std::cout << "Total Hook Load = " << HookLoad() << " lb" << std::endl;
+    std::cout << "Total Hook Load = " << HookLoad1() << " lb" << std::endl;
 
     std::cout << "Fast Line Tension = " << FastLineTension() << " lb" << std::endl;
 
@@ -278,15 +388,37 @@ int main(int argc, char* argv[])
 
     std::cout << "Drill String Weight in Mud = " << DrillStringWeightInMud() << " lb" << std::endl;
     
-    std::cout << "Hook Load = " << HookLoad() << " lb" << std::endl;
+    std::cout << "Hook Load = " << HookLoad2() << " lb" << std::endl;
 
     std::cout << "Dead Line Load = " << DeadLineLoad() << " lb" << std::endl;
 
-    std::cout << "Fast Line Load = " << FastLineLoad() << " lb" << std::endl;
+    std::cout << "Fast Line Load = " << FastLineLoad1() << " lb" << std::endl;
 
     std::cout << "Dynamic Crown Load = " << DynamicCrownLoad() << " lb" << std::endl;
 
     std::cout << "Design Factor = " << DesignFactor() << " \n" << std::endl;
+
+    std::cout << "Weight of Casing in Mud when running casing = " << WeightOfCasingInMudWhenRunningCasing() << " lb" << std::endl;
+    
+    std::cout << "Hook Load when running casing = " << HookLoadWhenRunningCasing() << " lb" << std::endl;
+    
+    std::cout << "Fast Line Load when running casing = " << FastLineLoadWhenRunningCasing() << " lb" << std::endl;
+    
+    std::cout << "Design Factor when running casing = " << DesignFactorWhenRunningCasing() << " \n" << std::endl;
+
+    std::cout << "Hook Load Velocity = " << HookLoadVelocity() << " ft/min" << std::endl;
+
+    std::cout << "Power at Drum = " << PowerAtDrum() << " hp" << std::endl;
+
+    std::cout << "Motor Power = " << MotorPower() << " hp" << std::endl;
+
+    std::cout << "Market Data Motor Power = " << MarketDataMotorPower() << " with hp rating" << std::endl;
+
+    std::cout << "Fast Line Speed = " << FastLineSpeed() << " ft/min" << std::endl;
+
+    std::cout << "Drum Speed = " << DrumSpeed() << " rpm" << std::endl;
+
+    std::cout << "Gear Ratio = " << GearRatio() << std::endl;
 
     return EXIT_SUCCESS;
 }
