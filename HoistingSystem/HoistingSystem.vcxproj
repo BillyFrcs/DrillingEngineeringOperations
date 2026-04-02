@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{195155c2-8033-4c98-98eb-3f3666186ca3}</ProjectGuid>
+    <ProjectGuid>{fa7fef37-13e9-49bf-8b79-1e3cd4ad0416}</ProjectGuid>
     <RootNamespace>HoistingSystem</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
