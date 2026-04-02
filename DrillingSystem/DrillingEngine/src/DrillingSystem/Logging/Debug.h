@@ -19,6 +19,7 @@ namespace DrillingSystem
 		~Debug();
 
 		static void Run();
+
 		static void Log(std::string message);
 	};
 }
