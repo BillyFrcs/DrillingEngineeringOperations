@@ -1,6 +1,6 @@
 #include <iostream>
-#include <iomanip>
 #include <print>
+#include <iomanip>
 
 long double HookLoad1()
 {
@@ -8,7 +8,7 @@ long double HookLoad1()
     long double blockHookWeight = 40000;
 
     long double totalHookLoad_W = buoyedWeight + blockHookWeight;
-
+                      
     return std::ceil(totalHookLoad_W);
 }
 
@@ -205,7 +205,7 @@ long double DeadLineLoad()
     long double E = 0.811;
 
     long double calculate = (hookLoadWeight * KN) / (N * E);
-    
+
     return std::ceil(calculate);
 }
 
@@ -308,9 +308,9 @@ long double MotorPower()
 {
     long double powerAtDrum = PowerAtDrum();
     long double motorEfficiency = 0.88;
-    
+
     long double calculate = powerAtDrum / motorEfficiency;
-    
+
     return calculate;
 }
 
@@ -323,9 +323,9 @@ long double FastLineSpeed()
 {
     long double N = 10;
     long double hookLoadSpeed = HookLoadVelocity();
-    
+
     long double Vf = N * hookLoadSpeed;
-    
+
     return Vf;
 }
 
@@ -350,7 +350,7 @@ long double GearRatio()
     return calculate;
 }
 
-int main(int argc, char* argv[]) 
+int main(int argc, char* argv[])
 {
     std::cout << "Total Hook Load = " << HookLoad1() << " lb" << std::endl;
 
@@ -369,7 +369,7 @@ int main(int argc, char* argv[])
     std::cout << "Draw-Works Output = " << DrawWorksOutput() << " hp \n" << std::endl;
 
     std::cout << "Power Draw-Works Output = " << std::fixed << std::setprecision(0) << PDWOut() << " hp" << std::endl;
-    
+
     std::cout << "Power Input = " << std::fixed << std::setprecision(0) << Pi() << " ft-lb/min" << std::endl;
 
     std::cout << "Hoisting Efficiency = " << std::fixed << std::setprecision(2) << HoistingEfficiency() << " lb" << std::endl;
@@ -387,7 +387,7 @@ int main(int argc, char* argv[])
     std::cout << "Drill String Weight in Air = " << DrillStringWeightInAir() << " lb" << std::endl;
 
     std::cout << "Drill String Weight in Mud = " << DrillStringWeightInMud() << " lb" << std::endl;
-    
+
     std::cout << "Hook Load = " << HookLoad2() << " lb" << std::endl;
 
     std::cout << "Dead Line Load = " << DeadLineLoad() << " lb" << std::endl;
@@ -399,11 +399,11 @@ int main(int argc, char* argv[])
     std::cout << "Design Factor = " << DesignFactor() << " \n" << std::endl;
 
     std::cout << "Weight of Casing in Mud when running casing = " << WeightOfCasingInMudWhenRunningCasing() << " lb" << std::endl;
-    
+
     std::cout << "Hook Load when running casing = " << HookLoadWhenRunningCasing() << " lb" << std::endl;
-    
+
     std::cout << "Fast Line Load when running casing = " << FastLineLoadWhenRunningCasing() << " lb" << std::endl;
-    
+
     std::cout << "Design Factor when running casing = " << DesignFactorWhenRunningCasing() << " \n" << std::endl;
 
     std::cout << "Hook Load Velocity = " << HookLoadVelocity() << " ft/min" << std::endl;
