@@ -30,6 +30,10 @@
     <ClInclude Include="src\DrillingSystem\Calculations\HydrostaticPressure.h" />
     <ClInclude Include="src\DrillingSystem\Calculations\EquivalentCirculatingDensity.h" />
     <ClInclude Include="src\DrillingSystem\Engine\DrillingEngine.h" />
+    <ClInclude Include="src\Platform.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
