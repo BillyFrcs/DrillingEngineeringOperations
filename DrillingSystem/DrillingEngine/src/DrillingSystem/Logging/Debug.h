@@ -20,7 +20,8 @@ namespace DrillingSystem
 
 		static void Run();
 
-		static void Log(std::string message);
+		template <typename T>
+		static void DrillingLog(const T& log);
 	};
 }
 
