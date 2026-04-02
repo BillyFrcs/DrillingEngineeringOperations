@@ -1,0 +1,3 @@
+[submodule "DrillingSystem/DrillingEngine/vendor/spdlog"]
+	path = DrillingSystem/DrillingEngine/vendor/spdlog
+	url = https://github.com/gabime/spdlog.git

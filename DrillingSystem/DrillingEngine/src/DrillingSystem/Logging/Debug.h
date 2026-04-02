@@ -3,6 +3,7 @@
 #include <iostream>
 #include <cmath>
 
+#include "spdlog/spdlog.h"
 #include "DrillingSystem/Engine/DrillingEngine.h"
 
 #ifndef APPLICATION_H
@@ -18,6 +19,7 @@ namespace DrillingSystem
 		~Debug();
 
 		static void Run();
+		static void Log(std::string message);
 	};
 }
 

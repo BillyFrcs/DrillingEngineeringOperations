@@ -30,3 +30,8 @@ void DrillingSystem::Debug::Run()
 	std::cout << drillingEngine.MetricEquivalentCirculatingDensity(1200, 2760, 2440) << std::endl;
 	*/
 }
+
+void DrillingSystem::Debug::Log(std::string message)
+{
+	spdlog::info(message);
+}
