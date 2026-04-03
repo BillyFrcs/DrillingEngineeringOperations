@@ -2,73 +2,75 @@
 
 int main(int argc, char* argv[])
 {
-    std::cout << "Total Hook Load = " << HookLoad1() << " lb" << std::endl;
+	std::println("Total Hook Load = {:.2f} lb", HookLoad1());
 
-    std::cout << "Fast Line Tension = " << FastLineTension() << " lb" << std::endl;
+	std::println("Fast Line Tension = {} lb", FastLineTension());
 
-    std::cout << "Dead Line Tension = " << DeadLineTension() << " lb" << std::endl;
+	std::println("Dead Line Tension = {} lb", DeadLineTension());
 
-    std::cout << "Derrick Load under the Dynamic Conditions = " << DerrickLoadUnderDynamicConditions() << " lb \n" << std::endl;
+	std::println("Derrick Load under the Dynamic Conditions = {} lb \n", DerrickLoadUnderDynamicConditions());
 
-    std::cout << "Required Traveling Block Output = " << std::fixed << std::setprecision(0) << RequiredTravelingBlockOutput() << " ft-lb/min" << std::endl;
+	std::println("Required Traveling Block Output = {:.2f} ft-lb/min", RequiredTravelingBlockOutput());
 
-    std::cout << "Required Traveling Block Input = " << std::fixed << std::setprecision(0) << RequiredTravelingBlockInput() << " ft-lb/min" << std::endl;
+	std::println("Required Traveling Block Input = {} ft-lb/min", RequiredTravelingBlockInput());
 
-    std::cout << "Horse Power = " << std::fixed << std::setprecision(2) << HorsePower() << " hp" << std::endl;
+	std::println("Horse Power = {} hp", HorsePower());
 
-    std::cout << "Draw-Works Output = " << DrawWorksOutput() << " hp \n" << std::endl;
+	std::println("Draw-Works Output = {} hp \n", DrawWorksOutput());
 
-    std::cout << "Power Draw-Works Output = " << std::fixed << std::setprecision(0) << PDWOut() << " hp" << std::endl;
+	std::println("Power Draw-Works Output = {} hp", PowerDrawWorksOutput());
 
-    std::cout << "Power Input = " << std::fixed << std::setprecision(0) << Pi() << " ft-lb/min" << std::endl;
+	std::println("Power Input = {} ft-lb/min", Pi());
 
-    std::cout << "Hoisting Efficiency = " << std::fixed << std::setprecision(2) << HoistingEfficiency() << " lb" << std::endl;
+	std::println("Hoisting Efficiency = {}", HoistingEfficiency());
 
-    std::cout << "Fast Line Velocity = " << std::fixed << std::setprecision(0) << FastLineVelocity() << " fpm" << std::endl;
+	std::println("Fast Line Velocity = {} fpm", FastLineVelocity());
 
-    std::cout << "Traveling Block Velocity = " << std::fixed << std::setprecision(0) << TravelingBlockVelocity() << " fpm" << std::endl;
+	std::println("Traveling Block Velocity = {} fpm", TravelingBlockVelocity());
 
-    std::cout << "Traveling Block Speed = " << TravelingBlockSpeed() << " min \n" << std::endl;
+	std::println("Traveling Block Speed = {} min \n", TravelingBlockSpeed());
 
-    std::cout << "Drill Pipe Weight = " << DrillPipeWeight() << " lb" << std::endl;
+	std::println("Drill Pipe Weight = {} lb", DrillPipeWeight());
 
-    std::cout << "Drill Collar Weight = " << DrillCollarWeight() << " lb" << std::endl;
+	std::println("Drill Collar Weight = {} lb", DrillCollarWeight());
 
-    std::cout << "Drill String Weight in Air = " << DrillStringWeightInAir() << " lb" << std::endl;
+	std::println("Drill String Weight in Air = {} lb", DrillStringWeightInAir());
 
-    std::cout << "Drill String Weight in Mud = " << DrillStringWeightInMud() << " lb" << std::endl;
+	std::println("Drill String Weight in Mud = {} lb", DrillStringWeightInMud());
 
-    std::cout << "Hook Load = " << HookLoad2() << " lb" << std::endl;
+	std::println("Hook Load = {} lb", HookLoad2());
 
-    std::cout << "Dead Line Load = " << DeadLineLoad() << " lb" << std::endl;
+	std::println("Dead Line Load = {} lb", DeadLineLoad());
 
-    std::cout << "Fast Line Load = " << FastLineLoad1() << " lb" << std::endl;
+	std::println("Fast Line Load = {} lb", FastLineLoad1());
 
-    std::cout << "Dynamic Crown Load = " << DynamicCrownLoad() << " lb" << std::endl;
+	std::println("Dynamic Crown Load = {} lb", DynamicCrownLoad());
 
-    std::cout << "Design Factor = " << DesignFactor() << " \n" << std::endl;
+	std::println("Design Factor = {}", DesignFactor());
 
-    std::cout << "Weight of Casing in Mud when running casing = " << WeightOfCasingInMudWhenRunningCasing() << " lb" << std::endl;
+	std::println("Weight of Casing in Mud when running casing = {} lb", WeightOfCasingInMudWhenRunningCasing());
 
-    std::cout << "Hook Load when running casing = " << HookLoadWhenRunningCasing() << " lb" << std::endl;
+	std::println("Hook Load When running casing = {} lb", HookLoadWhenRunningCasing());
 
-    std::cout << "Fast Line Load when running casing = " << FastLineLoadWhenRunningCasing() << " lb" << std::endl;
+	std::println("Fast Line Load when running casing = {} lb", FastLineLoadWhenRunningCasing());
+	
+    std::println("Design Factor when running casing = {} \n", DesignFactorWhenRunningCasing());
 
-    std::cout << "Design Factor when running casing = " << DesignFactorWhenRunningCasing() << " \n" << std::endl;
+	std::println("Hook Load Velocity = {} ft/min", HookLoadVelocity());
 
-    std::cout << "Hook Load Velocity = " << HookLoadVelocity() << " ft/min" << std::endl;
+	std::println("Power at Drum = {} hp", PowerAtDrum());
 
-    std::cout << "Power at Drum = " << PowerAtDrum() << " hp" << std::endl;
+	std::println("Motor Power = {} hp", MotorPower());
 
-    std::cout << "Motor Power = " << MotorPower() << " hp" << std::endl;
+	std::println("Select a Motor = {} hp rating", MarketDataMotorPower());
 
-    std::cout << "Market Data Motor Power = " << MarketDataMotorPower() << " with hp rating" << std::endl;
+	std::println("Market Data {} hp Motor Speed = {} RPM", MarketDataMotorPower(), MarketDataMotorSpeed());
 
-    std::cout << "Fast Line Speed = " << FastLineSpeed() << " ft/min" << std::endl;
+	std::println("Fast Line Speed = {} ft/min", FastLineSpeed());
 
-    std::cout << "Drum Speed = " << DrumSpeed() << " rpm" << std::endl;
+	std::println("Drum Speed = {} rpm", DrumSpeed());
 
-    std::cout << "Gear Ratio = " << GearRatio() << std::endl;
+	std::println("Gear Ratio = {}", GearRatio());
 
     return EXIT_SUCCESS;
 }

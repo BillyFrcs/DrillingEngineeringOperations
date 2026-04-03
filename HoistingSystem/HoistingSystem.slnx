@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="HoistingSystem.vcxproj" />
+  <Project Path="HoistingSystem.vcxproj" Id="fa7fef37-13e9-49bf-8b79-1e3cd4ad0416" />
 </Solution>

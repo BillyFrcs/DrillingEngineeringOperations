@@ -2,7 +2,6 @@
 
 #include <iostream>
 #include <print>
-#include <iomanip>
 
 #ifndef HOISTING_SYSTEM_H
 #define HOISTING_SYSTEM_H
@@ -90,7 +89,7 @@ long double DrawWorksOutput()
     return nDW;
 }
 
-long double PDWOut()
+long double PowerDrawWorksOutput()
 {
     long double powerInput = 1200;
     long double travelingBlockInput_Pi = 0.80;
@@ -102,7 +101,7 @@ long double PDWOut()
 
 long double Pi()
 {
-    long double PDW_out = PDWOut();
+    long double PDW_out = PowerDrawWorksOutput();
     long double horsePower = 33000;
 
     long double calculate = PDW_out * horsePower;
@@ -322,6 +321,11 @@ long double MotorPower()
 long double MarketDataMotorPower()
 {
     return 3000;
+}
+
+long double MarketDataMotorSpeed()
+{
+    return 1200;
 }
 
 long double FastLineSpeed()
