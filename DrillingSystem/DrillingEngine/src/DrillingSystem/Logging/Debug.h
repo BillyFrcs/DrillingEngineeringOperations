@@ -6,8 +6,8 @@
 #include "spdlog/spdlog.h"
 #include "DrillingSystem/Engine/DrillingEngine.h"
 
-#ifndef APPLICATION_H
-#define APPLICATION_H
+#ifndef DEBUG_H
+#define DEBUG_H
 
 namespace DrillingSystem
 {
@@ -25,4 +25,4 @@ namespace DrillingSystem
 	};
 }
 
-#endif // APPLICATION_H
+#endif // DEBUG_H
