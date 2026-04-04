@@ -58,7 +58,7 @@ namespace DrillingSystem.Services
                                                                                                                                              
             double imperialEcd = ImperialEquivalentCirculatingDensityCalculation(ecdEngine, _ecdModel.MudWeightPpg, _ecdModel.PressureLossPsi, _ecdModel.TrueVerticalDepthFeet);
 
-            Console.WriteLine($"Imperial ECD Result: {imperialEcd} ppg");
+            Console.WriteLine($"Imperial Equivalent Circulating Density result = {imperialEcd} ppg");
 
             DestroyEquivalentCirculatingDensity(ecdEngine);
         }
@@ -71,7 +71,7 @@ namespace DrillingSystem.Services
 
             double metricEcd = MetricEquivalentCirculatingDensityCalculation(ecdEngine, _ecdModel.MudWeightSg, _ecdModel.PressureLossBar, _ecdModel.TrueVerticalDepthMeter);
 
-            Console.WriteLine($"Metric ECD Result: {metricEcd} sg \n");
+            Console.WriteLine($"Metric Equivalent Circulating Density result = {metricEcd} sg \n");
 
             DestroyEquivalentCirculatingDensity(ecdEngine);
         }
