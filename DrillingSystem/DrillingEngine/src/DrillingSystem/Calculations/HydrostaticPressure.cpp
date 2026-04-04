@@ -12,14 +12,14 @@ DrillingSystem::HydrostaticPressure::~HydrostaticPressure()
 
 double DrillingSystem::HydrostaticPressure::ImperialCalculation()
 {
-	double equivalentCirculatingDensity = m_MudWeight * 0.052 * m_TrueVerticalDepth;
+	double hydrostaticPressure = m_MudWeight * 0.052 * m_TrueVerticalDepth;
 
-	return equivalentCirculatingDensity;
+	return hydrostaticPressure;
 }
 
 double DrillingSystem::HydrostaticPressure::MetricCalculation()
 {
-	double equivalentCirculatingDensity = m_MudWeight * 9.81 * m_TrueVerticalDepth / 1000;
+	double hydrostaticPressure = m_MudWeight * 9.81 * m_TrueVerticalDepth / 1000;
 
-	return equivalentCirculatingDensity;
+	return hydrostaticPressure;
 }
