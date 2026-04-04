@@ -92,8 +92,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpplatest</LanguageStandard>
-      <LanguageStandard_C>stdclatest</LanguageStandard_C>
+      <LanguageStandard>stdcpp23</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
       <AdditionalIncludeDirectories>$(SolutionDir)\src\;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
@@ -109,8 +109,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpplatest</LanguageStandard>
-      <LanguageStandard_C>stdclatest</LanguageStandard_C>
+      <LanguageStandard>stdcpp23</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
       <AdditionalIncludeDirectories>$(SolutionDir)\src\;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
@@ -124,8 +124,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpplatest</LanguageStandard>
-      <LanguageStandard_C>stdclatest</LanguageStandard_C>
+      <LanguageStandard>stdcpp23</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
       <AdditionalIncludeDirectories>$(SolutionDir)\src\;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
@@ -141,8 +141,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpplatest</LanguageStandard>
-      <LanguageStandard_C>stdclatest</LanguageStandard_C>
+      <LanguageStandard>stdcpp23</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
       <AdditionalIncludeDirectories>$(SolutionDir)\src\;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
@@ -151,10 +151,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\HoistingSystem\HoistingSystem.cpp" />
+    <ClCompile Include="src\HoistingSystem\Calculations\OilWellBlockAndTackleSystem.cpp" />
+    <ClCompile Include="src\HoistingSystem\Calculations\HoistingAndDrawwoksAnalysis.cpp" />
+    <ClCompile Include="src\HoistingSystem\Calculations\BlockAndDrillingLine.cpp" />
+    <ClCompile Include="src\HoistingSystem\Calculations\RigDerrickLoad.cpp" />
+    <ClCompile Include="src\HoistingSystem\Application\Application.cpp" />
+    <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\HoistingSystem\HoistingSystem.h" />
+    <ClInclude Include="src\HoistingSystem\Calculations\OilWellBlockAndTackleSystem.h" />
+    <ClInclude Include="src\HoistingSystem\Calculations\HoistingAndDrawwoksAnalysis.h" />
+    <ClInclude Include="src\HoistingSystem\Calculations\BlockAndDrillingLine.h" />
+    <ClInclude Include="src\HoistingSystem\Calculations\RigDerrickLoad.h" />
+    <ClInclude Include="src\HoistingSystem\Application\Application.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

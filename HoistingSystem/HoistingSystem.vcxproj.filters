@@ -15,12 +15,39 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\HoistingSystem\HoistingSystem.cpp">
+    <ClCompile Include="src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HoistingSystem\Application\Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HoistingSystem\Calculations\RigDerrickLoad.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HoistingSystem\Calculations\BlockAndDrillingLine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HoistingSystem\Calculations\HoistingAndDrawwoksAnalysis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HoistingSystem\Calculations\OilWellBlockAndTackleSystem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\HoistingSystem\HoistingSystem.h">
+    <ClInclude Include="src\HoistingSystem\Application\Application.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HoistingSystem\Calculations\RigDerrickLoad.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HoistingSystem\Calculations\BlockAndDrillingLine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HoistingSystem\Calculations\HoistingAndDrawwoksAnalysis.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HoistingSystem\Calculations\OilWellBlockAndTackleSystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
