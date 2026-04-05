@@ -75,7 +75,7 @@ Kp = 3.21
 Velocity = 560.22 ft/min 170.75 m/min <br>
 Effective viscosity = 48.97 cP <br>
 Reynolds Number = 8665.57 <br>
-Friction Factor = 0.001607 <br>
+Friction Factor = 0.006025 <br>
 Pressure Loss = 792.60 psi 54.64 bar
 </p>
 
