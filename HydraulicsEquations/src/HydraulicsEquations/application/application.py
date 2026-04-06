@@ -1,8 +1,10 @@
-from HydraulicsEquations.calculations import drill_pipe_pressure_drop
 from HydraulicsEquations.calculations.surface_line_pressure_drop import SurfaceLinePressureDrop
 from HydraulicsEquations.calculations.drill_pipe_pressure_drop import DrillPipePressureDrop
 
 class Application(object):
+    def __init__(self):
+        pass
+
     def run(self):
         Application.surface_line_pressure_drop()
         Application.drill_pipe_pressure_drop()
