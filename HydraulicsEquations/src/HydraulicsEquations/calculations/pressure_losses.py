@@ -1,0 +1,2 @@
+class PressureLosses(object):
+    pass

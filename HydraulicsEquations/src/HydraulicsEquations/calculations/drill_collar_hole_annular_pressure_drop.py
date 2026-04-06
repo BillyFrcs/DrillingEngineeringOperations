@@ -1,0 +1,2 @@
+class DrillCollarHoleAnnularPressureDrop(object):
+    pass

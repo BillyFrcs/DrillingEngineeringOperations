@@ -1,0 +1,10 @@
+pyproject.toml
+src/HydraulicsEquations/__init__.py
+src/HydraulicsEquations/__main__.py
+src/HydraulicsEquations/cli.py
+src/HydraulicsEquations.egg-info/PKG-INFO
+src/HydraulicsEquations.egg-info/SOURCES.txt
+src/HydraulicsEquations.egg-info/dependency_links.txt
+src/HydraulicsEquations.egg-info/entry_points.txt
+src/HydraulicsEquations.egg-info/requires.txt
+src/HydraulicsEquations.egg-info/top_level.txt
