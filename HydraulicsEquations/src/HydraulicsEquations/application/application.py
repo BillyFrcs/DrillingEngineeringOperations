@@ -3,6 +3,7 @@ from HydraulicsEquations.calculations.drill_pipe_pressure_drop import DrillPipeP
 from HydraulicsEquations.calculations.drill_collar_pressure_drop import DrillCollarPressureDrop
 from HydraulicsEquations.calculations.drill_collar_hole_annular_pressure_drop import DrillCollarHoleAnnularPressureDrop
 from HydraulicsEquations.calculations.drill_pipe_hole_annular_pressure_drop import DrillPipeHoleAnnularPressureDrop
+from HydraulicsEquations.calculations.drill_pipe_casing_annular_pressure_drop import DrillPipeCasingAnnularPressureDrop
 
 class Application(object):
     def __init__(self):
@@ -14,6 +15,7 @@ class Application(object):
         Application.drill_collar_pressure_drop()
         Application.drill_collar_hole_annular_pressure_drop()
         Application.drill_pipe_hole_annular_pressure_drop()
+        Application.drill_pipe_casing_annular_pressure_drop()
     
     @staticmethod
     def surface_line_pressure_drop():
@@ -38,14 +40,21 @@ class Application(object):
 
     @staticmethod
     def drill_collar_hole_annular_pressure_drop():
-        drill_collar_pressure_drop = DrillCollarHoleAnnularPressureDrop(theta_100 = 21, theta_03 = 8, flow_rate = 335, inside_diameter = 8.625, mud_density = 12.8, length = 390)
+        drill_collar_hole_pressure_drop = DrillCollarHoleAnnularPressureDrop(theta_100 = 21, theta_03 = 8, flow_rate = 335, inside_diameter = 8.625, mud_density = 12.8, length = 390)
         
-        drill_collar_pressure_drop.run_all_calculations()
-        drill_collar_pressure_drop.display_results()
+        drill_collar_hole_pressure_drop.run_all_calculations()
+        drill_collar_hole_pressure_drop.display_results()
 
     @staticmethod
     def drill_pipe_hole_annular_pressure_drop():
-        drill_collar_pressure_drop = DrillPipeHoleAnnularPressureDrop(theta_100 = 21, theta_03 = 8, flow_rate = 335, inside_diameter = 8.625, mud_density = 12.8, length = 855)
+        drill_pipe_hole_annular_pressure_drop = DrillPipeHoleAnnularPressureDrop(theta_100 = 21, theta_03 = 8, flow_rate = 335, inside_diameter = 8.625, mud_density = 12.8, length = 855)
         
-        drill_collar_pressure_drop.run_all_calculations()
-        drill_collar_pressure_drop.display_results()
+        drill_pipe_hole_annular_pressure_drop.run_all_calculations()
+        drill_pipe_hole_annular_pressure_drop.display_results()
+
+    @staticmethod
+    def drill_pipe_casing_annular_pressure_drop():
+        drill_pipe_casing_annular_pressure_drop = DrillPipeCasingAnnularPressureDrop(theta_100 = 21, theta_03 = 8, flow_rate = 335, inside_diameter = 8.835, mud_density = 12.8, length = 10786)
+        
+        drill_pipe_casing_annular_pressure_drop.run_all_calculations()
+        drill_pipe_casing_annular_pressure_drop.display_results()
