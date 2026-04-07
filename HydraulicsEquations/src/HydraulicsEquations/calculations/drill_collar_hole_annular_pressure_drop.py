@@ -59,7 +59,7 @@ class DrillCollarHoleAnnularPressureDrop(object):
     def calculate_reynolds_number(self):
         """
         Reynolds Number: 
-        NRep = (15.467 * Va * (D2 - D1) * ρ) / μep --> Reynolds number ? 2100;
+        NRea = (15.467 * Va * (D2 - D1) * ρ) / μep --> Reynolds number ? 2100;
         """
         self.reynolds_number = (15.467 * self.velocity_ft * (self.inside_diameter - 7) * self.mud_density) / self.effective_viscosity
         
@@ -68,7 +68,7 @@ class DrillCollarHoleAnnularPressureDrop(object):
     def calculate_friction_factor(self):
         """ 
         Friction Factor:
-        fp = {(log n + 3.93) / 50} / [NRep]{(1.75 - log na) / 7)}
+        fa = {(log n + 3.93) / 50} / [NRea]{(1.75 - log na) / 7)}
         """
         self.friction_factor = ((math.log10(0.275) + 3.93) / 50) / math.pow(self.reynolds_number, (1.75 - math.log10(0.275)) / 7)
         
