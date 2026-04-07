@@ -58,7 +58,7 @@ Kp = 3.21
 <p>
 Velocity = 560.22 ft/min 170.75 m/min <br>
 Effective Viscosity = 48.97 cP <br>
-Reynolds Number = 8665.57 <br>
+Reynolds Number = 8664.78 <br>
 Friction Factor = 0.006025 <br>
 Pressure Loss = 41.53 psi 2.86 bar
 </p>
@@ -74,9 +74,9 @@ Kp = 3.21
 <p>
 Velocity = 560.22 ft/min 170.75 m/min <br>
 Effective viscosity = 48.97 cP <br>
-Reynolds Number = 8665.57 <br>
+Reynolds Number = 8664.78 <br>
 Friction Factor = 0.006025 <br>
-Pressure Loss = 792.60 psi 54.64 bar
+Pressure Loss = 792.65 psi 54.65 bar
 </p>
 
 <b>3. DRILL COLLAR PRESSURE DROP</b>
@@ -90,7 +90,7 @@ Kp = 3.21
 <p>
 Velocity = 1619.91 ft/min 493.74 m/min <br>
 Effective viscosity = 27.60 cP <br>
-Reynolds Number = 26144.50 <br>
+Reynolds Number = 26141.32 <br>
 Friction Factor = 0.004434 <br>
 Pressure Loss = 277.82 psi 19.15 bar
 </p>
@@ -106,9 +106,9 @@ Ka = 26.10
 <p>
 Velocity = 322.98 ft/min 98.44 m/min <br>
 Effective viscosity = 35.48 cP <br>
-Reynolds Number = 2927.88 <br>
+Reynolds Number = 2928.07 <br>
 Friction Factor = 0.004833 <br>
-Pressure Loss = 16.65 psi 1.14 bar
+Pressure Loss = 16.67 psi 1.14 bar
 </p>
 
 <b>5. DP – HOLE ANNULAR PRESSURE DROP</b>
@@ -123,7 +123,7 @@ Kp = 26.10
 Velocity = 151.47 ft/min 46.16 m/min <br>
 Effective viscosity = 120.72 cP <br>
 Reynolds Number = 403.64 <br>
-Friction Factor = 0.05945 <br>
+Friction Factor = 0.059457 <br>
 Pressure Loss = 38.95 psi 2.68 bar
 </p>
 
@@ -137,10 +137,10 @@ Kp = 26.10
 <b>ANNULAR INTERVAL #3 (9"5/8 CASING - 4"1/2 DRILL PIPE): Casing ID = 8.835"</b>
 <p>
 Velocity = 141.86 ft/min 43.24 m/min <br>
-Effective viscosity = 131.22 cP <br>
-Reynolds Number = 927.04 <br>
-Friction Factor = 0.025869 <br>
-Pressure Loss = 178.44 psi 12.30 bar
+Effective viscosity = 131.24 cP <br>
+Reynolds Number = 927.71 <br>
+Friction Factor = 0.025870 <br>
+Pressure Loss = 178.45 psi 12.30 bar
 </p>
 
 <h3 align="">Pressure Losses</h3>
@@ -148,14 +148,15 @@ Pressure Loss = 178.44 psi 12.30 bar
 | Part Name                                             | PSI              | BAR             |
 | :---------------------------------------------------- |:----------------:|:---------------:|
 | Surface Line Pressure Drop                            | 41.53            | 2.86            |
-| DRILL STRING INTERVAL #1 (DRILL PIPE)                 | 792.60           | 54.64           |
-| DRILL STRING INTERVAL #2 (DRILL COLLARS)              | 277.82           | 19.15           |
-| ANNULAR INTERVAL #1 (8"5/8 HOLE - 7" DRILL COLLARS)   | 16.65            | 1.14            |
-| ANNULAR INTERVAL #2 (8"5/8 HOLE - 4"1/2 DRILL PIPE)   | 15.34            | 1.05            |
-| ANNULAR INTERVAL #3 (9"5/8 CASING - 4"1/2 DRILL PIPE) | 178.44           | 12.30           |
-| <b>TOTAL</b>                                          | <b>1322.08</b>   | <b>91.14</b>    |
+| DRILL STRING INTERVAL #1 (DRILL PIPE)                 | 792.60           | 54.65           |
+| DRILL STRING INTERVAL #2 (DRILL COLLARS)              | 277.84           | 19.15           |
+| ANNULAR INTERVAL #1 (8"5/8 HOLE - 7" DRILL COLLARS)   | 16.67            | 1.14            |
+| ANNULAR INTERVAL #2 (8"5/8 HOLE - 4"1/2 DRILL PIPE)   | 38.95            | 2.68            |
+| ANNULAR INTERVAL #3 (9"5/8 CASING - 4"1/2 DRILL PIPE) | 178.45           | 12.30           |
+| <b>TOTAL</b>                                          | <b>1346.04</b>   | <b>92.78</b>    |
                                                               
 <p>
-Surface Pressure = 3000.00 psi </br>
-Bit Pressure Drop = 1677.91 psi <!-- 3000.00 - 1322.08-->
+Surface Pressure = 3000.00 psi 206.8427 bar </br>
+Bit Pressure Drop (psi) = Surface Pressure (psi) - Total Pressure Loss (psi) = 3000.00 - 1346.04 = 1653.96 psi
+Bit Pressure Drop (bar) = Surface Pressure (bar) - Total Pressure Loss (bar) = 206.8427 - 92.78 = 114.06 bar
 </p>
