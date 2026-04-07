@@ -121,10 +121,10 @@ Kp = 26.10
 <b>ANNULAR INTERVAL #2 (8"5/8 HOLE - 4"1/2 DRILL PIPE):</b>
 <p>
 Velocity = 151.47 ft/min 46.16 m/min <br>
-Effective viscosity = 120.71 cP <br>
-Reynolds Number = 2928.69 <br>
-Friction Factor = 0.023420 <br>
-Pressure Loss = 15.34 psi 1.05 bar
+Effective viscosity = 120.72 cP <br>
+Reynolds Number = 403.64 <br>
+Friction Factor = 0.05945 <br>
+Pressure Loss = 38.95 psi 2.68 bar
 </p>
 
 <b>6. DP – CASING ANNULAR PRESSURE DROP</b>
