@@ -51,7 +51,7 @@ class DrillCollarPressureDrop(object):
     def calculate_effective_viscosity(self):
         """
         Effective viscosity:
-        μep (cP) = 100 * Kp * {(1.6 * Vp) / D)}(np-1) * {(3np + 1)/(4 * np)}(np) = ... cP
+        μep (cP) = 100 * Kp * {(1.6 * Vp) / D)}(np - 1) * {(3np + 1) / (4 * np)}(np) = ... cP
         """
         self.effective_viscosity = (100 * 3.21 * ((math.pow((1.6 * self.velocity_ft) / self.inside_diameter, 0.64 - 1))) * math.pow((3 * 0.64 + 1) / (4 * 0.64), 0.64)) 
         
@@ -69,7 +69,7 @@ class DrillCollarPressureDrop(object):
     def calculate_friction_factor(self):
         """ 
         Friction Factor:
-        fp = {(log n + 3.93) / 50} / [NRep]{(1.75 - log np)/7)}
+        fp = {(log n + 3.93) / 50} / [NRep]{(1.75 - log np) / 7)}
         """
         self.friction_factor = ((math.log10(0.64) + 3.93) / 50) / math.pow(self.reynolds_number, (1.75 - math.log10(0.64)) / 7)
         

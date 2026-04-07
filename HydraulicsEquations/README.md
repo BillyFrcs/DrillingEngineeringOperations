@@ -98,8 +98,8 @@ Pressure Loss = 277.82 psi 19.15 bar
 <b>4. DC – HOLE ANNULAR PRESSURE DROP</b>
 <p>
 Pipe "n" and "K" values: <br>
-Np = 0.275 <br>
-Kp = 26.10
+Na = 0.275 <br>
+Ka = 26.10
 </p>
 
 <b>ANNULAR INTERVAL #1 (8"5/8 HOLE - 7" DRILL COLLARS):</b>
