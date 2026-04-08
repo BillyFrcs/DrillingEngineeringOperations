@@ -1,0 +1,1 @@
+Update git submodules by run this command: git submodule update --remote --merge DrillingEngine/vendor/spdlog
