@@ -87,6 +87,12 @@ class DrillCollarHoleAnnularPressureDrop(object):
         
         return self.pressure_loss_psi, self.pressure_loss_bar
 
+    def get_pressure_loss_psi(self):
+        return self.pressure_loss_psi
+
+    def get_pressure_loss_bar(self):
+        return self.pressure_loss_bar
+
     def run_all_calculations(self):
         self.calculate_n_k()
         self.calculate_velocity()
