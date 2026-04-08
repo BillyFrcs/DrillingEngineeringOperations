@@ -156,7 +156,7 @@ Pressure Loss = 178.45 psi 12.30 bar
 | <b>TOTAL</b>                                          | <b>1346.04</b>   | <b>92.78</b>    |
                                                               
 <p>
-Surface Pressure = 3000.00 psi 206.8427 bar </br>
-Bit Pressure Drop (psi) = Surface Pressure (psi) - Total Pressure Loss (psi) = 3000.00 - 1346.04 = 1653.96 psi
+Surface Pressure = 3000.00 psi 206.8427 bar <br>
+Bit Pressure Drop (psi) = Surface Pressure (psi) - Total Pressure Loss (psi) = 3000.00 - 1346.04 = 1653.96 psi <br>
 Bit Pressure Drop (bar) = Surface Pressure (bar) - Total Pressure Loss (bar) = 206.8427 - 92.78 = 114.06 bar
 </p>
