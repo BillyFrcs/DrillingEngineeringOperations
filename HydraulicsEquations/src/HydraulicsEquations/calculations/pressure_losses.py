@@ -41,7 +41,7 @@ class PressureLosses(object):
         bit_pressure_drop_psi = 3000.00 - calculate_pressure_loss_psi
         bit_pressure_drop_bar = 206.8427 - calculate_pressure_loss_bar
 
-        print("\nPRESSURE LOSS")
+        print("\nPRESSURE LOSSES")
         print("-" * 30)
 
         print(f"Total Pressure Loss = {calculate_pressure_loss_psi} psi {calculate_pressure_loss_bar} bar")
