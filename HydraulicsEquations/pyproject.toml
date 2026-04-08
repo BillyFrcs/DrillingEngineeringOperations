@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "HydraulicsEquations"
 version = "0.1.0"
-description = "Hydraulic Equations calculations based on American Petroleum Institute (API)"
+description = "Hydraulic Equations calculations based on American Petroleum Institute (API)."
 dependencies = [
     "click",
     "requests",
