@@ -4,7 +4,6 @@ from HydraulicsEquations.calculations.drill_collar_pressure_drop import DrillCol
 from HydraulicsEquations.calculations.drill_collar_hole_annular_pressure_drop import DrillCollarHoleAnnularPressureDrop
 from HydraulicsEquations.calculations.drill_pipe_hole_annular_pressure_drop import DrillPipeHoleAnnularPressureDrop
 from HydraulicsEquations.calculations.drill_pipe_casing_annular_pressure_drop import DrillPipeCasingAnnularPressureDrop
-from HydraulicsEquations.calculations.conversions import Conversions
 
 class PressureLosses(object):
     def __init__(self):
@@ -42,5 +41,8 @@ class PressureLosses(object):
         bit_pressure_drop_psi = 3000.00 - calculate_pressure_loss_psi
         bit_pressure_drop_bar = 206.8427 - calculate_pressure_loss_bar
 
-        print(f"\nTotal Pressure Loss = {calculate_pressure_loss_psi} psi {calculate_pressure_loss_bar} bar")
+        print("\nPRESSURE LOSS")
+        print("-" * 30)
+
+        print(f"Total Pressure Loss = {calculate_pressure_loss_psi} psi {calculate_pressure_loss_bar} bar")
         print(f"Bit Pressure Drop = {bit_pressure_drop_psi} psi {bit_pressure_drop_bar} bar")
