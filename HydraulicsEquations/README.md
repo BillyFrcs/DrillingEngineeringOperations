@@ -153,10 +153,10 @@ Pressure Loss = 178.45 psi 12.30 bar
 | ANNULAR INTERVAL #1 (8"5/8 HOLE - 7" DRILL COLLARS)   | 16.67            | 1.14            |
 | ANNULAR INTERVAL #2 (8"5/8 HOLE - 4"1/2 DRILL PIPE)   | 38.95            | 2.68            |
 | ANNULAR INTERVAL #3 (9"5/8 CASING - 4"1/2 DRILL PIPE) | 178.45           | 12.30           |
-| <b>TOTAL</b>                                          | <b>1346.04</b>   | <b>92.78</b>    |
+| <b>TOTAL</b>                                          | <b>1346.11</b>   | <b>92.81</b>    |
                                                               
 <p>
 Surface Pressure = 3000.00 psi 206.8427 bar <br>
-Bit Pressure Drop (psi) = Surface Pressure (psi) - Total Pressure Loss (psi) = 3000.00 - 1346.04 = 1653.96 psi <br>
-Bit Pressure Drop (bar) = Surface Pressure (bar) - Total Pressure Loss (bar) = 206.8427 - 92.78 = 114.06 bar
+Bit Pressure Drop (psi) = Surface Pressure (psi) - Total Pressure Loss (psi) = 3000.00 - 1346.11 = 1653.88 psi <br>
+Bit Pressure Drop (bar) = Surface Pressure (bar) - Total Pressure Loss (bar) = 206.8427 - 92.78 = 114.03 bar
 </p>
