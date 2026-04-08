@@ -45,6 +45,7 @@
     <Folder Include="src\HydraulicsEquations\application\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="docs.txt" />
     <Content Include="pyproject.toml" />
   </ItemGroup>
   <ItemGroup>
