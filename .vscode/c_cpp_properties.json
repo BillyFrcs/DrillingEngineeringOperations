@@ -3,7 +3,7 @@
         {
             "name": "Win32",
             "includePath": [
-                "c:/Developer/DrillingEngineeringOperations/**"
+                "${workspaceFolder}/**"
             ],
             "defines": [
                 "_DEBUG",
