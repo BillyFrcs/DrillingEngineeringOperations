@@ -51,7 +51,4 @@
   <ItemGroup>
     <None Include="cpp.hint" />
   </ItemGroup>
-  <ItemGroup>
-    <Text Include="docs.txt" />
-  </ItemGroup>
 </Project>

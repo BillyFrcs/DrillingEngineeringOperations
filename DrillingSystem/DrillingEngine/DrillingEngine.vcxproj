@@ -35,9 +35,6 @@
   <ItemGroup>
     <None Include="cpp.hint" />
   </ItemGroup>
-  <ItemGroup>
-    <Text Include="docs.txt" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
