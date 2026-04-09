@@ -17,7 +17,7 @@ class Application(object):
         Application.drill_collar_hole_annular_pressure_drop()
         Application.drill_pipe_hole_annular_pressure_drop()
         Application.drill_pipe_casing_annular_pressure_drop()
-        Application.pressure_losses_psi()
+        Application.pressure_losses()
     
     @staticmethod
     def surface_line_pressure_drop():
@@ -62,7 +62,7 @@ class Application(object):
         drill_pipe_casing_annular_pressure_drop.display_results()
 
     @staticmethod
-    def pressure_losses_psi():
+    def pressure_losses():
         pressure_losses = PressureLosses()
 
-        pressure_losses.display_pressure_losses_psi()
+        pressure_losses.display_pressure_losses()
