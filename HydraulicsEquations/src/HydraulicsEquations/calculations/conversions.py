@@ -1,4 +1,7 @@
 class Conversions(object):
+    def __init__(self):
+        pass
+
     def feet_to_meters(self, feet):
         return feet * 0.3048
 
