@@ -9,7 +9,7 @@ class PressureLosses(object):
     def __init__(self):
         pass
 
-    def display_pressure_losses_psi(self):
+    def display_pressure_losses(self):
         surface_line_pressure_drop = SurfaceLinePressureDrop(theta_600 = 34, theta_300 = 53, flow_rate = 335, inside_diameter = 3.826, mud_density = 12.8, length = 610)
 
         surface_line_pressure_drop.run_all_calculations()
