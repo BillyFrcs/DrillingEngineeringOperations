@@ -4,6 +4,7 @@
 
 #include "DrillingSystem/Calculations/EquivalentCirculatingDensity.h"
 #include "DrillingSystem/Calculations/HydrostaticPressure.h"
+#include "DrillingSystem/Calculations/KillWeightMud.h"
 
 #ifndef DRILLING_ENGINE_H
 #define DRILLING_ENGINE_H
@@ -26,6 +27,10 @@ namespace DrillingSystem
         double ImperialHydrostaticPressure(double mudWeight_ppg, double trueVerticalDepth_feet);
 
         double MetricHydrostaticPressure(double mudWeight_sg, double trueVerticalDepth_meter);
+
+        double ImperialKillWeightMud(double currentMudWeight_ppg, double SIDPP_psi, double trueVerticalDepth_feet);
+
+        double MetricKillWeightMud(double currentMudWeight_kg_m3, double SIDPP_KPa, double trueVerticalDepth_meter);
 
         void Destroy(DrillingEngine* drillingEngine);
 	};

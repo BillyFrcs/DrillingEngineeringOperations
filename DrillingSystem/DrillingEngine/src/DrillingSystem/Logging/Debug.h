@@ -18,10 +18,19 @@ namespace DrillingSystem
 
 		~Debug();
 
-		static void Run();
+		void EquivalentCirculatingDensity();
+
+		void HydrostaticPressure();
+
+		void KillWeightMud();
+
+		void Run();
 
 		template <typename T>
 		static void DrillingLog(const T& log);
+
+	private:
+		std::unique_ptr<DrillingSystem::DrillingEngine> m_DrillingEnginePtr;
 	};
 }
 
