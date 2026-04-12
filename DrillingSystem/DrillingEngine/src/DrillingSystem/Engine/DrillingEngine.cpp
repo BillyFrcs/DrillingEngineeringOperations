@@ -8,13 +8,6 @@ DrillingSystem::DrillingEngine::~DrillingEngine()
 {
 }
 
-DrillingSystem::DrillingEngine* DrillingSystem::DrillingEngine::Create()
-{
-	auto drillingEngine = std::make_unique<DrillingSystem::DrillingEngine>();
-
-	return drillingEngine.release();
-}
-
 double DrillingSystem::DrillingEngine::ImperialEquivalentCirculatingDensity(double mudWeight_ppg, double pressureLoss_psi, double trueVerticalDepth_feet)
 {
 	auto ecd = std::make_unique<DrillingSystem::EquivalentCirculatingDensity>(mudWeight_ppg, pressureLoss_psi, trueVerticalDepth_feet);
@@ -55,9 +48,4 @@ double DrillingSystem::DrillingEngine::MetricKillWeightMud(double currentMudWeig
 	auto kwm = std::make_unique<DrillingSystem::KillWeightMud>(currentMudWeight_kg_m3, SIDPP_KPa, trueVerticalDepth_meter);
 
 	return kwm->MetricCalculation();
-}
-
-void DrillingSystem::DrillingEngine::Destroy(DrillingEngine* drillingEngine)
-{
-	std::unique_ptr<DrillingSystem::DrillingEngine> drillingEnginePtr(drillingEngine);
 }
