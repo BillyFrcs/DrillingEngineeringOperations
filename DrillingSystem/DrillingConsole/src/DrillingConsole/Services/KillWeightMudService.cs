@@ -69,7 +69,7 @@ namespace DrillingSystem.DrillingConsole.Services
 
             double metricKwm = MetricKillWeightMudCalculation(kwmEngine, _kwmModel.MudWeightKgM3, _kwmModel.SIDPPkPa, _kwmModel.TrueVerticalDepthMeter);
 
-            Console.WriteLine($"Metric Kill Weight Mud result = {metricKwm} Kg/m^3 \n");
+            Console.WriteLine($"Metric Kill Weight Mud result = {metricKwm} kg/m^3 \n");
 
             DestroyKillWeightMud(kwmEngine);
         }

@@ -32,7 +32,7 @@ namespace DrillingSystem.DrillingConsole.Services
                 {
                     MudWeightPpg = 12.2,
                     TrueVerticalDepthFeet = 12000,
-                    MudWeightSg = 1200,
+                    MudWeightKgM3 = 1200,
                     TrueVerticalDepthMeter = 2440
                 };
             }
@@ -65,7 +65,7 @@ namespace DrillingSystem.DrillingConsole.Services
 
             ObjectDisposedException.ThrowIf(hpEngine == IntPtr.Zero, nameof(hpEngine));
 
-            double metricHP = MetricHydrostaticPressureCalculation(hpEngine, _hydrostaticPressureModel.MudWeightSg, _hydrostaticPressureModel.TrueVerticalDepthMeter);
+            double metricHP = MetricHydrostaticPressureCalculation(hpEngine, _hydrostaticPressureModel.MudWeightKgM3, _hydrostaticPressureModel.TrueVerticalDepthMeter);
 
             Console.WriteLine($"Metric Hydrostatic Pressure result = {metricHP} bar \n");
 

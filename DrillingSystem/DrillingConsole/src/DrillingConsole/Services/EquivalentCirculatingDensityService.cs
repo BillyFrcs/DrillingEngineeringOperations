@@ -35,8 +35,8 @@ namespace DrillingSystem.DrillingConsole.Services
                     MudWeightPpg = 12.2,
                     PressureLossPsi = 400,
                     TrueVerticalDepthFeet = 12000,
-                    MudWeightSg = 1200,
-                    PressureLossBar = 2760,
+                    MudWeightKgM3 = 1200,
+                    PressureLosskPa = 2760,
                     TrueVerticalDepthMeter = 2440
                 };
             }
@@ -69,9 +69,9 @@ namespace DrillingSystem.DrillingConsole.Services
 
             ObjectDisposedException.ThrowIf(ecdEngine == IntPtr.Zero, nameof(ecdEngine));
 
-            double metricEcd = MetricEquivalentCirculatingDensityCalculation(ecdEngine, _ecdModel.MudWeightSg, _ecdModel.PressureLossBar, _ecdModel.TrueVerticalDepthMeter);
+            double metricEcd = MetricEquivalentCirculatingDensityCalculation(ecdEngine, _ecdModel.MudWeightKgM3, _ecdModel.PressureLosskPa, _ecdModel.TrueVerticalDepthMeter);
 
-            Console.WriteLine($"Metric Equivalent Circulating Density result = {metricEcd} sg \n");
+            Console.WriteLine($"Metric Equivalent Circulating Density result = {metricEcd} kg/m^3 \n");
 
             DestroyEquivalentCirculatingDensity(ecdEngine);
         }
