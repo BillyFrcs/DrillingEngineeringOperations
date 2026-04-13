@@ -34,20 +34,6 @@ void DrillingSystem::Debug::Run()
 	HydrostaticPressure();
 
 	KillWeightMud();
-
-	/*
-	DrillingSystem::DrillingEngine de;
-	DrillingSystem::DrillingEngine* drillingEngine = de.Create();
-
-	// DEBUG: Check if the pointer is null before using it
-	DrillingLog(drillingEngine->ImperialEquivalentCirculatingDensity(12.2, 400, 12000));
-	DrillingLog(drillingEngine->MetricEquivalentCirculatingDensity(1200, 2760, 2440));
-
-	DrillingLog(drillingEngine->ImperialHydrostaticPressure(12.2, 12000));
-	DrillingLog(drillingEngine->MetricHydrostaticPressure(1200, 2440));
-
-	drillingEngine->Destroy(drillingEngine);
-	*/
 }
 
 template <typename T>
