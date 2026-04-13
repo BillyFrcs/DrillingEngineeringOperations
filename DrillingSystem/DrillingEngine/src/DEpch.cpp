@@ -1,6 +1,4 @@
-#include "Platform.h"
-#include "DrillingSystem/Engine/DrillingEngine.h"
-#include "DrillingSystem/Logging/Debug.h"
+#include "DEpch.h"
 
 // C-Style Wrapper (Bridge) function using pointer
 extern "C"
@@ -76,9 +74,9 @@ extern "C"
 
 	DLL_EXPORT void DestroyDrillingEngine(DrillingSystem::DrillingEngine* drillingEngine)
 	{
-		std::unique_ptr<DrillingSystem::DrillingEngine> drillingEnginePtr(drillingEngine);
+		std::unique_ptr<DrillingSystem::DrillingEngine> de(drillingEngine);
 
-		// delete drillingEnginePtr;
+		// delete de;
 	}
 }
 

@@ -4,7 +4,7 @@
 #include <cmath>
 
 #include "spdlog/spdlog.h"
-#include "DrillingSystem/Engine/DrillingEngine.h"
+#include "DrillingEngine/Core/DrillingEngine.h"
 
 #ifndef DEBUG_H
 #define DEBUG_H
@@ -30,7 +30,7 @@ namespace DrillingSystem
 		static void DrillingLog(const T& log);
 
 	private:
-		std::unique_ptr<DrillingSystem::DrillingEngine> m_DrillingEnginePtr;
+		std::unique_ptr<DrillingSystem::DrillingEngine> m_DrillingEngine;
 	};
 }
 

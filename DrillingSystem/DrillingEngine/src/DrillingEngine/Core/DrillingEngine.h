@@ -2,9 +2,9 @@
 
 #include <memory>
 
-#include "DrillingSystem/Calculations/EquivalentCirculatingDensity.h"
-#include "DrillingSystem/Calculations/HydrostaticPressure.h"
-#include "DrillingSystem/Calculations/KillWeightMud.h"
+#include "DrillingEngine/Calculations/EquivalentCirculatingDensity.h"
+#include "DrillingEngine/Calculations/HydrostaticPressure.h"
+#include "DrillingEngine/Calculations/KillWeightMud.h"
 
 #ifndef DRILLING_ENGINE_H
 #define DRILLING_ENGINE_H

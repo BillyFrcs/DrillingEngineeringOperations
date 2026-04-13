@@ -19,19 +19,20 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\DrillingSystem\Calculations\KillWeightMud.cpp" />
-    <ClCompile Include="src\DrillingSystem\Logging\Debug.cpp" />
-    <ClCompile Include="src\DrillingSystem\Calculations\HydrostaticPressure.cpp" />
-    <ClCompile Include="src\DrillingSystem\Calculations\EquivalentCirculatingDensity.cpp" />
-    <ClCompile Include="src\DrillingSystem\Engine\DrillingEngine.cpp" />
-    <ClCompile Include="src\DrillingSystem.cpp" />
+    <ClCompile Include="src\DrillingEngine\Calculations\KillWeightMud.cpp" />
+    <ClCompile Include="src\DrillingEngine\Logging\Debug.cpp" />
+    <ClCompile Include="src\DrillingEngine\Calculations\HydrostaticPressure.cpp" />
+    <ClCompile Include="src\DrillingEngine\Calculations\EquivalentCirculatingDensity.cpp" />
+    <ClCompile Include="src\DrillingEngine\Core\DrillingEngine.cpp" />
+    <ClCompile Include="src\DEpch.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\DrillingSystem\Calculations\KillWeightMud.h" />
-    <ClInclude Include="src\DrillingSystem\Logging\Debug.h" />
-    <ClInclude Include="src\DrillingSystem\Calculations\HydrostaticPressure.h" />
-    <ClInclude Include="src\DrillingSystem\Calculations\EquivalentCirculatingDensity.h" />
-    <ClInclude Include="src\DrillingSystem\Engine\DrillingEngine.h" />
+    <ClInclude Include="src\DEpch.h" />
+    <ClInclude Include="src\DrillingEngine\Calculations\KillWeightMud.h" />
+    <ClInclude Include="src\DrillingEngine\Logging\Debug.h" />
+    <ClInclude Include="src\DrillingEngine\Calculations\HydrostaticPressure.h" />
+    <ClInclude Include="src\DrillingEngine\Calculations\EquivalentCirculatingDensity.h" />
+    <ClInclude Include="src\DrillingEngine\Core\DrillingEngine.h" />
     <ClInclude Include="src\Platform.h" />
   </ItemGroup>
   <ItemGroup>
