@@ -9,7 +9,7 @@
 #ifndef DRILLING_ENGINE_H
 #define DRILLING_ENGINE_H
 
-namespace DrillingSystem
+namespace DrillingSystem::DrillingEngine
 {
     class DrillingEngine
     {

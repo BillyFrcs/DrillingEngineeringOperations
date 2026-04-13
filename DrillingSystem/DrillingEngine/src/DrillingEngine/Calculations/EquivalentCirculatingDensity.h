@@ -3,7 +3,7 @@
 #ifndef EQUIVALENT_CIRCULATING_DENSITY_H
 #define EQUIVALENT_CIRCULATING_DENSITY_H
 
-namespace DrillingSystem
+namespace DrillingSystem::DrillingEngine
 {
 	class EquivalentCirculatingDensity
 	{

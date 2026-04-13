@@ -3,7 +3,7 @@
 #ifndef KILL_WEIGHT_MUD_H
 #define KILL_WEIGHT_MUD_H
 
-namespace DrillingSystem
+namespace DrillingSystem::DrillingEngine
 {
 	class KillWeightMud
 	{

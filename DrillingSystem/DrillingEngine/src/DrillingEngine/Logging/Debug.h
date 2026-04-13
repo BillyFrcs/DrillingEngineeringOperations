@@ -9,7 +9,7 @@
 #ifndef DEBUG_H
 #define DEBUG_H
 
-namespace DrillingSystem
+namespace DrillingSystem::DrillingEngine
 {
 	class Debug
 	{
@@ -30,7 +30,7 @@ namespace DrillingSystem
 		static void DrillingLog(const T& log);
 
 	private:
-		std::unique_ptr<DrillingSystem::DrillingEngine> m_DrillingEngine;
+		std::unique_ptr<DrillingSystem::DrillingEngine::DrillingEngine> m_DrillingEngine;
 	};
 }
 

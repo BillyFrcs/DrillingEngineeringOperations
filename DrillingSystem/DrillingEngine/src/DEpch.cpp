@@ -3,16 +3,16 @@
 // C-Style Wrapper (Bridge) function using pointer
 extern "C"
 {
-	DLL_EXPORT DrillingSystem::DrillingEngine* CreateDrillingEngine()
+	DLL_EXPORT DrillingSystem::DrillingEngine::DrillingEngine* CreateDrillingEngine()
 	{
-		auto drillingEngine = std::make_unique<DrillingSystem::DrillingEngine>();
+		auto drillingEngine = std::make_unique<DrillingSystem::DrillingEngine::DrillingEngine>();
 
 		return drillingEngine.release();
 
 		// return new DrillingSystem::DrillingEngine();
 	}
 
-	DLL_EXPORT double ImperialEquivalentCirculatingDensityCalculation(DrillingSystem::DrillingEngine* drillingEngine, double mudWeight_ppg, double pressureLoss_psi, double trueVerticalDepth_feet)
+	DLL_EXPORT double ImperialEquivalentCirculatingDensityCalculation(DrillingSystem::DrillingEngine::DrillingEngine* drillingEngine, double mudWeight_ppg, double pressureLoss_psi, double trueVerticalDepth_feet)
 	{
 		if (drillingEngine == nullptr)
 		{
@@ -22,7 +22,7 @@ extern "C"
 		return drillingEngine->ImperialEquivalentCirculatingDensity(mudWeight_ppg, pressureLoss_psi, trueVerticalDepth_feet);
 	}
 
-	DLL_EXPORT double MetricEquivalentCirculatingDensityCalculation(DrillingSystem::DrillingEngine* drillingEngine, double mudWeight_sg, double pressureLoss_bar, double trueVerticalDepth_meter)
+	DLL_EXPORT double MetricEquivalentCirculatingDensityCalculation(DrillingSystem::DrillingEngine::DrillingEngine* drillingEngine, double mudWeight_sg, double pressureLoss_bar, double trueVerticalDepth_meter)
 	{
 		if (drillingEngine == nullptr)
 		{
@@ -32,7 +32,7 @@ extern "C"
 		return drillingEngine->MetricEquivalentCirculatingDensity(mudWeight_sg, pressureLoss_bar, trueVerticalDepth_meter);
 	}
 
-	DLL_EXPORT double ImperialHydrostaticPressureCalculation(DrillingSystem::DrillingEngine* drillingEngine, double mudWeight_ppg, double trueVerticalDepth_feet)
+	DLL_EXPORT double ImperialHydrostaticPressureCalculation(DrillingSystem::DrillingEngine::DrillingEngine* drillingEngine, double mudWeight_ppg, double trueVerticalDepth_feet)
 	{
 		if (drillingEngine == nullptr)
 		{
@@ -42,7 +42,7 @@ extern "C"
 		return drillingEngine->ImperialHydrostaticPressure(mudWeight_ppg, trueVerticalDepth_feet);
 	}
 
-	DLL_EXPORT double MetricHydrostaticPressureCalculation(DrillingSystem::DrillingEngine* drillingEngine, double mudWeight_sg, double trueVerticalDepth_meter)
+	DLL_EXPORT double MetricHydrostaticPressureCalculation(DrillingSystem::DrillingEngine::DrillingEngine* drillingEngine, double mudWeight_sg, double trueVerticalDepth_meter)
 	{
 		if (drillingEngine == nullptr)
 		{
@@ -52,7 +52,7 @@ extern "C"
 		return drillingEngine->MetricHydrostaticPressure(mudWeight_sg, trueVerticalDepth_meter);
 	}
 
-	DLL_EXPORT double ImperialKillWeightCalculation(DrillingSystem::DrillingEngine* drillingEngine, double currentMudWeight_ppg, double SIDPP_psi, double trueVerticalDepth_feet)
+	DLL_EXPORT double ImperialKillWeightCalculation(DrillingSystem::DrillingEngine::DrillingEngine* drillingEngine, double currentMudWeight_ppg, double SIDPP_psi, double trueVerticalDepth_feet)
 	{
 		if (drillingEngine == nullptr)
 		{
@@ -62,7 +62,7 @@ extern "C"
 		return drillingEngine->ImperialKillWeightMud(currentMudWeight_ppg, SIDPP_psi, trueVerticalDepth_feet);
 	}
 
-	DLL_EXPORT double MetricKillWeightCalculation(DrillingSystem::DrillingEngine* drillingEngine, double currentMudWeight_kg_m3, double SIDPP_KPa, double trueVerticalDepth_meter)
+	DLL_EXPORT double MetricKillWeightCalculation(DrillingSystem::DrillingEngine::DrillingEngine* drillingEngine, double currentMudWeight_kg_m3, double SIDPP_KPa, double trueVerticalDepth_meter)
 	{
 		if (drillingEngine == nullptr)
 		{
@@ -72,9 +72,9 @@ extern "C"
 		return drillingEngine->MetricKillWeightMud(currentMudWeight_kg_m3, SIDPP_KPa, trueVerticalDepth_meter);
 	}
 
-	DLL_EXPORT void DestroyDrillingEngine(DrillingSystem::DrillingEngine* drillingEngine)
+	DLL_EXPORT void DestroyDrillingEngine(DrillingSystem::DrillingEngine::DrillingEngine* drillingEngine)
 	{
-		std::unique_ptr<DrillingSystem::DrillingEngine> de(drillingEngine);
+		std::unique_ptr<DrillingSystem::DrillingEngine::DrillingEngine> de(drillingEngine);
 
 		// delete de;
 	}
@@ -92,7 +92,7 @@ extern "C" DLL_EXPORT double ImperialEquivalentCirculatingDensityCalculation(dou
 
 int main(int argc, char** argv)
 {
-	auto debug = std::make_unique<DrillingSystem::Debug>();
+	auto debug = std::make_unique<DrillingSystem::DrillingEngine::Debug>();
 		
 	debug->Run();
 

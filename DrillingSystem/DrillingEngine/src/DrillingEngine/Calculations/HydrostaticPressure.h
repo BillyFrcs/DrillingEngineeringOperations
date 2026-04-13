@@ -3,7 +3,7 @@
 #ifndef HYDROSTATIC_PRESSURE_H
 #define HYDROSTATIC_PRESSURE_H
 
-namespace DrillingSystem
+namespace DrillingSystem::DrillingEngine
 {
 	class HydrostaticPressure
 	{
