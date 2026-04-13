@@ -11,7 +11,10 @@ namespace DrillingSystem.DrillingConsole
         public static void Run()
         {
             Application.EquivalentCirculatingDensity();
+
             Application.HydrostaticPressure();
+            
+            Application.KillWeightMud();
         }
 
         public static void EquivalentCirculatingDensity()
@@ -21,6 +24,7 @@ namespace DrillingSystem.DrillingConsole
             // IEquivalentCirculatingDensity ecd = new EquivalentCirculatingDensityService();
 
             ecdService.ImperialEquivalentCirculatingDensityResult();
+
             ecdService.MetricEquivalentCirculatingDensityResult();
         }
 
@@ -29,7 +33,17 @@ namespace DrillingSystem.DrillingConsole
             HydrostaticPressureService hpService = new();
 
             hpService.ImperialHydrostaticPressureResult();
+
             hpService.MetricHydrostaticPressureResult();
+        }
+
+        public static void KillWeightMud()
+        {
+            KillWeightMudService kwmService = new();
+
+            kwmService.ImperialKillWeightMudResult();
+
+            kwmService.MetricKillWeightMudResult();
         }
     }
 }
