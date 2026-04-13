@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-using DrillingSystem.Services;
+using DrillingSystem.DrillingConsole.Services;
 
-namespace DrillingSystem
+namespace DrillingSystem.DrillingConsole
 {
     internal class Application
     {

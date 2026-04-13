@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace DrillingSystem
+namespace DrillingSystem.DrillingConsole
 {
     class Program
     {

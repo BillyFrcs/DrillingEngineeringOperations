@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DrillingSystem.Models
+namespace DrillingSystem.DrillingConsole.Models
 {
     internal class EquivalentCirculatingDensity
     {

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Text;
 
-using DrillingSystem.Interfaces;
-using DrillingSystem.Models;
+using DrillingSystem.DrillingConsole.Interfaces;
+using DrillingSystem.DrillingConsole.Models;
 
-namespace DrillingSystem.Services
+namespace DrillingSystem.DrillingConsole.Services
 {
     internal class EquivalentCirculatingDensityService : IEquivalentCirculatingDensity
     {
