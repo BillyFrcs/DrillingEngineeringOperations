@@ -15,9 +15,9 @@ double DrillingSystem::DrillingEngine::DrillingEngine::ImperialEquivalentCircula
 	return ecd->ImperialCalculation();
 }
 
-double DrillingSystem::DrillingEngine::DrillingEngine::MetricEquivalentCirculatingDensity(double mudWeight_sg, double pressureLoss_bar, double trueVerticalDepth_meter)
+double DrillingSystem::DrillingEngine::DrillingEngine::MetricEquivalentCirculatingDensity(double mudWeight_kg_m3, double pressureLoss_kPa, double trueVerticalDepth_meter)
 {
-	auto ecd = std::make_unique<DrillingSystem::DrillingEngine::EquivalentCirculatingDensity>(mudWeight_sg, pressureLoss_bar, trueVerticalDepth_meter);
+	auto ecd = std::make_unique<DrillingSystem::DrillingEngine::EquivalentCirculatingDensity>(mudWeight_kg_m3, pressureLoss_kPa, trueVerticalDepth_meter);
 
 	return ecd->MetricCalculation();
 }
@@ -29,9 +29,9 @@ double DrillingSystem::DrillingEngine::DrillingEngine::ImperialHydrostaticPressu
 	return hp->ImperialCalculation();
 }
 
-double DrillingSystem::DrillingEngine::DrillingEngine::MetricHydrostaticPressure(double mudWeight_sg, double trueVerticalDepth_meter)
+double DrillingSystem::DrillingEngine::DrillingEngine::MetricHydrostaticPressure(double mudWeight_kg_m3, double trueVerticalDepth_meter)
 {
-	auto hp = std::make_unique<DrillingSystem::DrillingEngine::HydrostaticPressure>(mudWeight_sg, trueVerticalDepth_meter);
+	auto hp = std::make_unique<DrillingSystem::DrillingEngine::HydrostaticPressure>(mudWeight_kg_m3, trueVerticalDepth_meter);
 	
 	return hp->MetricCalculation();
 }
