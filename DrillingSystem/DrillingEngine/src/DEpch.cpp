@@ -52,7 +52,7 @@ extern "C"
 		return drillingEngine->MetricHydrostaticPressure(mudWeight_sg, trueVerticalDepth_meter);
 	}
 
-	DLL_EXPORT double ImperialKillWeightCalculation(DrillingSystem::DrillingEngine::DrillingEngine* drillingEngine, double currentMudWeight_ppg, double SIDPP_psi, double trueVerticalDepth_feet)
+	DLL_EXPORT double ImperialKillWeightMudCalculation(DrillingSystem::DrillingEngine::DrillingEngine* drillingEngine, double currentMudWeight_ppg, double SIDPP_psi, double trueVerticalDepth_feet)
 	{
 		if (drillingEngine == nullptr)
 		{
@@ -62,7 +62,7 @@ extern "C"
 		return drillingEngine->ImperialKillWeightMud(currentMudWeight_ppg, SIDPP_psi, trueVerticalDepth_feet);
 	}
 
-	DLL_EXPORT double MetricKillWeightCalculation(DrillingSystem::DrillingEngine::DrillingEngine* drillingEngine, double currentMudWeight_kg_m3, double SIDPP_KPa, double trueVerticalDepth_meter)
+	DLL_EXPORT double MetricKillWeightMudCalculation(DrillingSystem::DrillingEngine::DrillingEngine* drillingEngine, double currentMudWeight_kg_m3, double SIDPP_KPa, double trueVerticalDepth_meter)
 	{
 		if (drillingEngine == nullptr)
 		{
