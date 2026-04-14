@@ -22,7 +22,7 @@ double DrillingSystem::DrillingEngine::EquivalentCirculatingDensity::ImperialCal
 
 double DrillingSystem::DrillingEngine::EquivalentCirculatingDensity::MetricCalculation()
 {
-	double equivalentCirculatingDensity = m_MudWeight + (m_PressureLoss * 1000 / 9.81 / m_TrueVerticalDepth);
+	double equivalentCirculatingDensity = m_MudWeight + (m_PressureLoss * 1000.0 / 9.81 / m_TrueVerticalDepth);
 
 	return 	equivalentCirculatingDensity;
 }

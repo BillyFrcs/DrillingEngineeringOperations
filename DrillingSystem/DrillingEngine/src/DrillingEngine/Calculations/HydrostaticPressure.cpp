@@ -19,7 +19,7 @@ double DrillingSystem::DrillingEngine::HydrostaticPressure::ImperialCalculation(
 
 double DrillingSystem::DrillingEngine::HydrostaticPressure::MetricCalculation()
 {
-	double hydrostaticPressure = m_MudWeight * 9.81 * m_TrueVerticalDepth / 100000;
+	double hydrostaticPressure = m_MudWeight * 9.81 * m_TrueVerticalDepth / 100000.0;
 
 	return hydrostaticPressure;
 }
