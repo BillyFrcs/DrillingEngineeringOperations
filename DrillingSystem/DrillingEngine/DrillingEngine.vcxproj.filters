@@ -33,6 +33,9 @@
     <ClCompile Include="src\DrillingEngine\Calculations\KillWeightMud.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\DrillingEngine\Logging\Logging.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\DrillingEngine\Calculations\EquivalentCirculatingDensity.h">
@@ -54,6 +57,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\DEpch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DrillingEngine\Logging\Logging.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

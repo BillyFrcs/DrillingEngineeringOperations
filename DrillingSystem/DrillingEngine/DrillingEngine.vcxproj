@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\DrillingEngine\Logging\Logging.cpp" />
     <ClCompile Include="src\DrillingEngine\Calculations\KillWeightMud.cpp" />
     <ClCompile Include="src\DrillingEngine\Logging\Debug.cpp" />
     <ClCompile Include="src\DrillingEngine\Calculations\HydrostaticPressure.cpp" />
@@ -27,6 +28,7 @@
     <ClCompile Include="src\DEpch.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\DrillingEngine\Logging\Logging.h" />
     <ClInclude Include="src\DEpch.h" />
     <ClInclude Include="src\DrillingEngine\Calculations\KillWeightMud.h" />
     <ClInclude Include="src\DrillingEngine\Logging\Debug.h" />
