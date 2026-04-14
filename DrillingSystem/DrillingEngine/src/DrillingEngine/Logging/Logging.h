@@ -1,8 +1,5 @@
 #pragma once
 
-#include <iostream>
-#include <cmath>
-
 #include "spdlog/spdlog.h"
 
 #ifndef LOGGING_H
