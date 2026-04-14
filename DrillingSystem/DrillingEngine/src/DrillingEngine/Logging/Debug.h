@@ -1,9 +1,6 @@
 #pragma once
 
-#include <iostream>
-#include <cmath>
-
-#include "spdlog/spdlog.h"
+#include "DrillingEngine/Logging/Logging.h"
 #include "DrillingEngine/Core/DrillingEngine.h"
 
 #ifndef DEBUG_H
@@ -25,9 +22,6 @@ namespace DrillingSystem::DrillingEngine
 		void KillWeightMud();
 
 		void Run();
-
-		template <typename T>
-		static void DrillingLog(const T& log);
 
 	private:
 		std::unique_ptr<DrillingSystem::DrillingEngine::DrillingEngine> m_DrillingEngine;
