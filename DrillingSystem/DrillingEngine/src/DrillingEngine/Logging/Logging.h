@@ -27,12 +27,6 @@ namespace DrillingSystem::DrillingEngine
 		}
 
 		template<typename T>
-		static void Debug(const T& value)
-		{
-			spdlog::debug(value);
-		}
-
-		template<typename T>
 		static void Warning(const T& value)
 		{
 			spdlog::warn(value);
@@ -42,6 +36,14 @@ namespace DrillingSystem::DrillingEngine
 		static void Critical(const T& value)
 		{
 			spdlog::critical(value);
+		}
+
+		template<typename T>
+		static void Debug(const T& value)
+		{
+			spdlog::set_level(spdlog::level::debug);
+
+			spdlog::debug(value);
 		}
 	};
 }
