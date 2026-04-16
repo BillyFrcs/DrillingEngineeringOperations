@@ -1,6 +1,7 @@
 #pragma once
 
 #include "spdlog/spdlog.h"
+#include "spdlog/sinks/stdout_color_sinks.h"
 
 #ifndef LOGGING_H
 #define LOGGING_H
@@ -44,6 +45,15 @@ namespace DrillingSystem::DrillingEngine
 			spdlog::set_level(spdlog::level::debug);
 
 			spdlog::debug(value);
+		}
+
+		template<typename T>
+		static void Console(const T& value)
+		{
+			auto console = spdlog::stdout_color_mt("console");
+			auto err_logger = spdlog::stderr_color_mt("stderr");
+
+			spdlog::get("console")->info(value);
 		}
 	};
 }
