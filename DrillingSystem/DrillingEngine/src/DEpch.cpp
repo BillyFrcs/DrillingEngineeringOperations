@@ -12,26 +12,6 @@ extern "C"
 		// return new DrillingSystem::DrillingEngine::DrillingEngine();
 	}
 
-	DLL_EXPORT double ImperialEquivalentCirculatingDensityCalculation(DrillingSystem::DrillingEngine::DrillingEngine* drillingEngine, double mudWeight_ppg, double pressureLoss_psi, double trueVerticalDepth_feet)
-	{
-		if (drillingEngine == nullptr)
-		{
-			throw std::invalid_argument("DrillingEngine pointer is null.");
-		}
-
-		return drillingEngine->ImperialEquivalentCirculatingDensity(mudWeight_ppg, pressureLoss_psi, trueVerticalDepth_feet);
-	}
-
-	DLL_EXPORT double MetricEquivalentCirculatingDensityCalculation(DrillingSystem::DrillingEngine::DrillingEngine* drillingEngine, double mudWeight_kg_m3, double pressureLoss_kPa, double trueVerticalDepth_meter)
-	{
-		if (drillingEngine == nullptr)
-		{
-			throw std::invalid_argument("DrillingEngine pointer is null.");
-		}
-
-		return drillingEngine->MetricEquivalentCirculatingDensity(mudWeight_kg_m3, pressureLoss_kPa, trueVerticalDepth_meter);
-	}
-
 	DLL_EXPORT double ImperialHydrostaticPressureCalculation(DrillingSystem::DrillingEngine::DrillingEngine* drillingEngine, double mudWeight_ppg, double trueVerticalDepth_feet)
 	{
 		if (drillingEngine == nullptr)
@@ -50,6 +30,26 @@ extern "C"
 		}
 
 		return drillingEngine->MetricHydrostaticPressure(mudWeight_kg_m3, trueVerticalDepth_meter);
+	}
+
+	DLL_EXPORT double ImperialEquivalentCirculatingDensityCalculation(DrillingSystem::DrillingEngine::DrillingEngine* drillingEngine, double mudWeight_ppg, double pressureLoss_psi, double trueVerticalDepth_feet)
+	{
+		if (drillingEngine == nullptr)
+		{
+			throw std::invalid_argument("DrillingEngine pointer is null.");
+		}
+
+		return drillingEngine->ImperialEquivalentCirculatingDensity(mudWeight_ppg, pressureLoss_psi, trueVerticalDepth_feet);
+	}
+
+	DLL_EXPORT double MetricEquivalentCirculatingDensityCalculation(DrillingSystem::DrillingEngine::DrillingEngine* drillingEngine, double mudWeight_kg_m3, double pressureLoss_kPa, double trueVerticalDepth_meter)
+	{
+		if (drillingEngine == nullptr)
+		{
+			throw std::invalid_argument("DrillingEngine pointer is null.");
+		}
+
+		return drillingEngine->MetricEquivalentCirculatingDensity(mudWeight_kg_m3, pressureLoss_kPa, trueVerticalDepth_meter);
 	}
 
 	DLL_EXPORT double ImperialKillWeightMudCalculation(DrillingSystem::DrillingEngine::DrillingEngine* drillingEngine, double currentMudWeight_ppg, double SIDPP_psi, double trueVerticalDepth_feet)

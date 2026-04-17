@@ -9,16 +9,16 @@ DrillingSystem::DrillingEngine::Debug::~Debug()
 {
 }
 
-void DrillingSystem::DrillingEngine::Debug::EquivalentCirculatingDensity()
-{
-	DrillingSystem::DrillingEngine::Logging::Debug(m_DrillingEngine->ImperialEquivalentCirculatingDensity(12.2, 400, 12000));
-	DrillingSystem::DrillingEngine::Logging::Debug(m_DrillingEngine->MetricEquivalentCirculatingDensity(1200, 2760, 2440));
-}
-
 void DrillingSystem::DrillingEngine::Debug::HydrostaticPressure()
 {
 	DrillingSystem::DrillingEngine::Logging::Debug(m_DrillingEngine->ImperialHydrostaticPressure(12.2, 12000));
 	DrillingSystem::DrillingEngine::Logging::Debug(m_DrillingEngine->MetricHydrostaticPressure(1200, 2440));
+}
+
+void DrillingSystem::DrillingEngine::Debug::EquivalentCirculatingDensity()
+{
+	DrillingSystem::DrillingEngine::Logging::Debug(m_DrillingEngine->ImperialEquivalentCirculatingDensity(12.2, 400, 12000));
+	DrillingSystem::DrillingEngine::Logging::Debug(m_DrillingEngine->MetricEquivalentCirculatingDensity(1200, 2760, 2440));
 }
 
 void DrillingSystem::DrillingEngine::Debug::KillWeightMud()
@@ -29,9 +29,9 @@ void DrillingSystem::DrillingEngine::Debug::KillWeightMud()
 
 void DrillingSystem::DrillingEngine::Debug::Run()
 {
-	EquivalentCirculatingDensity();
-
 	HydrostaticPressure();
+
+	EquivalentCirculatingDensity();
 
 	KillWeightMud();
 }
