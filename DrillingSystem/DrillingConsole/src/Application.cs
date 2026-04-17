@@ -63,7 +63,7 @@ namespace DrillingSystem.DrillingConsole
             }
         }
 
-        static int UnitChoice()
+        private static int UnitChoice()
         {
             Console.WriteLine("Choose Unit:");
             Console.WriteLine("1. Imperial");
@@ -74,14 +74,14 @@ namespace DrillingSystem.DrillingConsole
             return int.Parse(Console.ReadLine() ?? string.Empty);
         }
 
-        static void Pause()
+        private static void Pause()
         {
             Console.WriteLine("\nPress any key...");
 
             Console.ReadKey();
         }
 
-        public static void HydrostaticPressureMenu()
+        private static void HydrostaticPressureMenu()
         {
             HydrostaticPressureService hpService = new();
 
@@ -103,7 +103,7 @@ namespace DrillingSystem.DrillingConsole
             Pause();
         }
 
-        public static void EquivalentCirculatingDensityMenu()
+        private static void EquivalentCirculatingDensityMenu()
         {
             EquivalentCirculatingDensityService ecdService = new();
 
@@ -125,7 +125,7 @@ namespace DrillingSystem.DrillingConsole
             Pause();
         }
 
-        public static void KillWeightMudMenu()
+        private static void KillWeightMudMenu()
         {
             KillWeightMudService kwmService = new();
 
