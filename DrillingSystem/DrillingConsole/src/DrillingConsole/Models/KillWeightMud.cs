@@ -12,7 +12,7 @@ namespace DrillingSystem.DrillingConsole.Models
         public double TrueVerticalDepthFeet { get; set; } // feet
 
         // Properties for Metric Units
-        public double MudWeightKgM3 { get; set; } // kg/m^3
+        public double MudWeightKgM3 { get; set; } // kg/m³
         public double SIDPPkPa { get; set; } // kPa
         public double TrueVerticalDepthMeter { get; set; } // meter
     }

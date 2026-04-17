@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Runtime.InteropServices;
 using System.Text;
 
@@ -30,10 +31,10 @@ namespace DrillingSystem.DrillingConsole.Services
             {
                 _hydrostaticPressureModel = new HydrostaticPressure
                 {
-                    MudWeightPpg = 12.2,
-                    TrueVerticalDepthFeet = 12000,
-                    MudWeightKgM3 = 1200,
-                    TrueVerticalDepthMeter = 2440
+                    MudWeightPpg = 0,
+                    TrueVerticalDepthFeet = 0,
+                    MudWeightKgM3 = 0,
+                    TrueVerticalDepthMeter = 0
                 };
             }
             else
@@ -52,9 +53,20 @@ namespace DrillingSystem.DrillingConsole.Services
 
             ObjectDisposedException.ThrowIf(hpEngine == IntPtr.Zero, nameof(hpEngine));
 
+            Console.Write("\nEnter Mud Weight (ppg): ");
+
+            double mudWeight = double.Parse(Console.ReadLine() ?? string.Empty);
+
+            Console.Write("Enter TVD (ft): ");
+
+            double trueVerticalDepth = double.Parse(Console.ReadLine() ?? string.Empty);
+
+            _hydrostaticPressureModel.MudWeightPpg = mudWeight;
+            _hydrostaticPressureModel.TrueVerticalDepthFeet = trueVerticalDepth;
+
             double imperialHP = ImperialHydrostaticPressureCalculation(hpEngine, _hydrostaticPressureModel.MudWeightPpg,  _hydrostaticPressureModel.TrueVerticalDepthFeet);
 
-            Console.WriteLine($"Imperial Hydrostatic Pressure result = {imperialHP} psi");
+            Console.WriteLine($"Imperial Hydrostatic Pressure (HP) result is {imperialHP} psi");
 
             DestroyHydrostaticPressure(hpEngine);
         }
@@ -65,9 +77,20 @@ namespace DrillingSystem.DrillingConsole.Services
 
             ObjectDisposedException.ThrowIf(hpEngine == IntPtr.Zero, nameof(hpEngine));
 
+            Console.Write("\nEnter Mud Weight (kg/m³): ");
+
+            double mudWeight = double.Parse(Console.ReadLine() ?? string.Empty);
+
+            Console.Write("Enter TVD (m): ");
+
+            double trueVerticalDepth = double.Parse(Console.ReadLine() ?? string.Empty);
+
+            _hydrostaticPressureModel.MudWeightKgM3 = mudWeight;
+            _hydrostaticPressureModel.TrueVerticalDepthMeter = trueVerticalDepth;
+
             double metricHP = MetricHydrostaticPressureCalculation(hpEngine, _hydrostaticPressureModel.MudWeightKgM3, _hydrostaticPressureModel.TrueVerticalDepthMeter);
 
-            Console.WriteLine($"Metric Hydrostatic Pressure result = {metricHP} bar \n");
+            Console.WriteLine($"Metric Hydrostatic Pressure (HP) result is {metricHP} bar \n");
 
             DestroyHydrostaticPressure(hpEngine);
         }

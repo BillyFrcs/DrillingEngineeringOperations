@@ -10,40 +10,141 @@ namespace DrillingSystem.DrillingConsole
     {
         public static void Run()
         {
-            Application.EquivalentCirculatingDensity();
+            bool isRunning = true;
 
-            Application.HydrostaticPressure();
-            
-            Application.KillWeightMud();
+            while (isRunning)
+            {
+                Console.Clear();
+
+                Console.WriteLine("=== Drilling System: Well Control Operations === \n");
+
+                Console.WriteLine("--- Main Menu ---");
+                Console.WriteLine("1. Hydrostatic Pressure (HP)");
+                Console.WriteLine("2. Equivalent Circulating Density (ECD)");
+                Console.WriteLine("3. Kill Weight Mud (KWM)");
+                Console.WriteLine("4. Exit");
+                Console.Write("\nEnter your choice (1 - 4): ");
+
+                string userChoice = Console.ReadLine() ?? string.Empty;
+
+                Console.WriteLine();
+
+                switch (userChoice)
+                {
+                    case "1":
+                        HydrostaticPressureMenu();
+
+                        break;
+
+                    case "2":
+                        EquivalentCirculatingDensityMenu();
+
+                        break;
+
+                    case "3":
+                        KillWeightMudMenu();
+
+                        break;
+
+                    case "4":
+                        Console.WriteLine("Shutting down simulator. Safe operations.");
+                        
+                        isRunning = false;
+                        
+                        break;
+
+                    default:
+                        Console.WriteLine("ERROR: Invalid selection. Please choose a number between 1 and 4.");
+
+                        Pause();
+
+                        break;
+                }
+            }
         }
 
-        public static void EquivalentCirculatingDensity()
+        static int UnitChoice()
         {
-            EquivalentCirculatingDensityService ecdService = new();
+            Console.WriteLine("Choose Unit:");
+            Console.WriteLine("1. Imperial");
+            Console.WriteLine("2. Metric");
+            
+            Console.Write("Choose: ");
 
-            // IEquivalentCirculatingDensity ecd = new EquivalentCirculatingDensityService();
-
-            ecdService.ImperialEquivalentCirculatingDensityResult();
-
-            ecdService.MetricEquivalentCirculatingDensityResult();
+            return int.Parse(Console.ReadLine() ?? string.Empty);
         }
 
-        public static void HydrostaticPressure()
+        static void Pause()
+        {
+            Console.WriteLine("\nPress any key...");
+
+            Console.ReadKey();
+        }
+
+        public static void HydrostaticPressureMenu()
         {
             HydrostaticPressureService hpService = new();
 
-            hpService.ImperialHydrostaticPressureResult();
+            int unitChoice = UnitChoice();
 
-            hpService.MetricHydrostaticPressureResult();
+            if (unitChoice == 1)
+            {
+                hpService.ImperialHydrostaticPressureResult();
+            }
+            else if (unitChoice == 2) 
+            {
+                hpService.MetricHydrostaticPressureResult();
+            }
+            else
+            {
+                Console.WriteLine("ERROR: Invalid unit selection. Please choose 1 for Imperial or 2 for Metric.");
+            }
+
+            Pause();
         }
 
-        public static void KillWeightMud()
+        public static void EquivalentCirculatingDensityMenu()
+        {
+            EquivalentCirculatingDensityService ecdService = new();
+
+            int unitChoice = UnitChoice();
+
+            if (unitChoice == 1)
+            {
+                ecdService.ImperialEquivalentCirculatingDensityResult();
+            }
+            else if (unitChoice == 2)
+            {
+                ecdService.MetricEquivalentCirculatingDensityResult();
+            }
+            else
+            {
+                Console.WriteLine("ERROR: Invalid unit selection. Please choose 1 for Imperial or 2 for Metric.");
+            }
+
+            Pause();
+        }
+
+        public static void KillWeightMudMenu()
         {
             KillWeightMudService kwmService = new();
 
-            kwmService.ImperialKillWeightMudResult();
+            int unitChoice = UnitChoice();
 
-            kwmService.MetricKillWeightMudResult();
+            if (unitChoice == 1)
+            {
+                kwmService.ImperialKillWeightMudResult();
+            }
+            else if (unitChoice == 2)
+            {
+                kwmService.MetricKillWeightMudResult();
+            }
+            else
+            {
+                Console.WriteLine("ERROR: Invalid unit selection. Please choose 1 for Imperial or 2 for Metric.");
+            }
+
+            Pause();
         }
     }
 }

@@ -56,7 +56,7 @@ namespace DrillingSystem.DrillingConsole.Services
 
             double imperialKwm = ImperialKillWeightMudCalculation(kwmEngine, _kwmModel.MudWeightPpg, _kwmModel.SIDPPPsi, _kwmModel.TrueVerticalDepthFeet);
 
-            Console.WriteLine($"Imperial Kill Weight Mud result = {imperialKwm} ppg");
+            Console.WriteLine($"Imperial Kill Weight Mud (KWM) result is {imperialKwm} ppg");
 
             DestroyKillWeightMud(kwmEngine);
         }
@@ -69,7 +69,7 @@ namespace DrillingSystem.DrillingConsole.Services
 
             double metricKwm = MetricKillWeightMudCalculation(kwmEngine, _kwmModel.MudWeightKgM3, _kwmModel.SIDPPkPa, _kwmModel.TrueVerticalDepthMeter);
 
-            Console.WriteLine($"Metric Kill Weight Mud result = {metricKwm} kg/m^3 \n");
+            Console.WriteLine($"Metric Kill Weight Mud (KWM) result is {metricKwm} kg/m³ \n");
 
             DestroyKillWeightMud(kwmEngine);
         }

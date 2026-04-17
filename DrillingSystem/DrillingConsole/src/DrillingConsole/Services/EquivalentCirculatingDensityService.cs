@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Runtime.InteropServices;
 using System.Text;
 
@@ -58,7 +59,7 @@ namespace DrillingSystem.DrillingConsole.Services
                                                                                                                                              
             double imperialEcd = ImperialEquivalentCirculatingDensityCalculation(ecdEngine, _ecdModel.MudWeightPpg, _ecdModel.PressureLossPsi, _ecdModel.TrueVerticalDepthFeet);
 
-            Console.WriteLine($"Imperial Equivalent Circulating Density result = {imperialEcd} ppg");
+            Console.WriteLine($"Imperial Equivalent Circulating Density (ECD) result is {imperialEcd} ppg");
 
             DestroyEquivalentCirculatingDensity(ecdEngine);
         }
@@ -71,7 +72,7 @@ namespace DrillingSystem.DrillingConsole.Services
 
             double metricEcd = MetricEquivalentCirculatingDensityCalculation(ecdEngine, _ecdModel.MudWeightKgM3, _ecdModel.PressureLosskPa, _ecdModel.TrueVerticalDepthMeter);
 
-            Console.WriteLine($"Metric Equivalent Circulating Density result = {metricEcd} kg/m^3 \n");
+            Console.WriteLine($"Metric Equivalent Circulating Density (ECD) result is {metricEcd} kg/m³ \n");
 
             DestroyEquivalentCirculatingDensity(ecdEngine);
         }
