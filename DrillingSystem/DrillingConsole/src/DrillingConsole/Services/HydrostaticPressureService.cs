@@ -66,7 +66,7 @@ namespace DrillingSystem.DrillingConsole.Services
 
             double imperialHP = ImperialHydrostaticPressureCalculation(hpEngine, _hydrostaticPressureModel.MudWeightPpg,  _hydrostaticPressureModel.TrueVerticalDepthFeet);
 
-            Console.WriteLine($"Imperial Hydrostatic Pressure (HP) result is {imperialHP} psi");
+            Console.WriteLine($"\nImperial Hydrostatic Pressure (HP) result is {imperialHP} psi");
 
             DestroyHydrostaticPressure(hpEngine);
         }
@@ -90,7 +90,7 @@ namespace DrillingSystem.DrillingConsole.Services
 
             double metricHP = MetricHydrostaticPressureCalculation(hpEngine, _hydrostaticPressureModel.MudWeightKgM3, _hydrostaticPressureModel.TrueVerticalDepthMeter);
 
-            Console.WriteLine($"Metric Hydrostatic Pressure (HP) result is {metricHP} bar \n");
+            Console.WriteLine($"\nMetric Hydrostatic Pressure (HP) result is {metricHP} bar");
 
             DestroyHydrostaticPressure(hpEngine);
         }

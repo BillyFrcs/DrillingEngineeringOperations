@@ -23,22 +23,22 @@ namespace DrillingSystem.DrillingConsole.Services
         [DllImport("DrillingEngine.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern void DestroyDrillingEngine(IntPtr drillingEngine);
 
-        private EquivalentCirculatingDensity _ecdModel;
+        private EquivalentCirculatingDensity _equivalentCirculatingDensityModel;
 
         public EquivalentCirculatingDensityService()
         {
-            if (_ecdModel == null)
+            if (_equivalentCirculatingDensityModel == null)
             {
                 // EcdModel = new();
 
-                _ecdModel = new EquivalentCirculatingDensity
+                _equivalentCirculatingDensityModel = new EquivalentCirculatingDensity
                 {
-                    MudWeightPpg = 12.2,
-                    PressureLossPsi = 400,
-                    TrueVerticalDepthFeet = 12000,
-                    MudWeightKgM3 = 1200,
-                    PressureLosskPa = 2760,
-                    TrueVerticalDepthMeter = 2440
+                    MudWeightPpg = 0,
+                    PressureLossPsi = 0,
+                    TrueVerticalDepthFeet = 0,
+                    MudWeightKgM3 = 0,
+                    PressureLosskPa = 0,
+                    TrueVerticalDepthMeter = 0
                 };
             }
             else
@@ -56,10 +56,26 @@ namespace DrillingSystem.DrillingConsole.Services
             IntPtr ecdEngine = CreateEquivalentCirculatingDensity();
 
             ObjectDisposedException.ThrowIf(ecdEngine == IntPtr.Zero, nameof(ecdEngine));
-                                                                                                                                             
-            double imperialEcd = ImperialEquivalentCirculatingDensityCalculation(ecdEngine, _ecdModel.MudWeightPpg, _ecdModel.PressureLossPsi, _ecdModel.TrueVerticalDepthFeet);
 
-            Console.WriteLine($"Imperial Equivalent Circulating Density (ECD) result is {imperialEcd} ppg");
+            Console.Write("\nEnter Mud Weight (ppg): ");
+
+            double mudWeight = double.Parse(Console.ReadLine() ?? string.Empty);
+
+            Console.Write("Enter Pressure Loss (psi): ");
+
+            double pressureLoss = double.Parse(Console.ReadLine() ?? string.Empty);
+
+            Console.Write("Enter TVD (ft): ");
+
+            double trueVerticalDepth = double.Parse(Console.ReadLine() ?? string.Empty);
+
+            _equivalentCirculatingDensityModel.MudWeightPpg = mudWeight;
+            _equivalentCirculatingDensityModel.PressureLossPsi = pressureLoss;
+            _equivalentCirculatingDensityModel.TrueVerticalDepthFeet = trueVerticalDepth;
+
+            double imperialEcd = ImperialEquivalentCirculatingDensityCalculation(ecdEngine, _equivalentCirculatingDensityModel.MudWeightPpg, _equivalentCirculatingDensityModel.PressureLossPsi, _equivalentCirculatingDensityModel.TrueVerticalDepthFeet);
+
+            Console.WriteLine($"\nImperial Equivalent Circulating Density (ECD) result is {imperialEcd} ppg");
 
             DestroyEquivalentCirculatingDensity(ecdEngine);
         }
@@ -70,9 +86,25 @@ namespace DrillingSystem.DrillingConsole.Services
 
             ObjectDisposedException.ThrowIf(ecdEngine == IntPtr.Zero, nameof(ecdEngine));
 
-            double metricEcd = MetricEquivalentCirculatingDensityCalculation(ecdEngine, _ecdModel.MudWeightKgM3, _ecdModel.PressureLosskPa, _ecdModel.TrueVerticalDepthMeter);
+            Console.Write("\nEnter Mud Weight (kg/m³): ");
 
-            Console.WriteLine($"Metric Equivalent Circulating Density (ECD) result is {metricEcd} kg/m³ \n");
+            double mudWeight = double.Parse(Console.ReadLine() ?? string.Empty);
+
+            Console.Write("Enter Pressure Loss (kPa): ");
+          
+            double pressureLoss = double.Parse(Console.ReadLine() ?? string.Empty);
+
+            Console.Write("Enter TVD (m): ");
+
+            double trueVerticalDepth = double.Parse(Console.ReadLine() ?? string.Empty);
+
+            _equivalentCirculatingDensityModel.MudWeightKgM3 = mudWeight;
+            _equivalentCirculatingDensityModel.PressureLosskPa = pressureLoss;
+            _equivalentCirculatingDensityModel.TrueVerticalDepthMeter = trueVerticalDepth;
+
+            double metricEcd = MetricEquivalentCirculatingDensityCalculation(ecdEngine, _equivalentCirculatingDensityModel.MudWeightKgM3, _equivalentCirculatingDensityModel.PressureLosskPa, _equivalentCirculatingDensityModel.TrueVerticalDepthMeter);
+
+            Console.WriteLine($"\nMetric Equivalent Circulating Density (ECD) result is {metricEcd} kg/m³ \n");
 
             DestroyEquivalentCirculatingDensity(ecdEngine);
         }
