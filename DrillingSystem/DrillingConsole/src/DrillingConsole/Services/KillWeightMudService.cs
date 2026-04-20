@@ -5,6 +5,7 @@ using System.Text;
 
 using DrillingSystem.DrillingConsole.Interfaces;
 using DrillingSystem.DrillingConsole.Models;
+using DrillingSystem.DrillingConsole.Utils;
 
 namespace DrillingSystem.DrillingConsole.Services
 {
@@ -54,17 +55,11 @@ namespace DrillingSystem.DrillingConsole.Services
 
             ObjectDisposedException.ThrowIf(kwmEngine == IntPtr.Zero, nameof(kwmEngine));
 
-            Console.Write("\nEnter Mud Weight (ppg): ");
+            double mudWeight = Validations.ReadNumericLine("\nEnter Mud Weight (ppg): ");
 
-            double mudWeight = double.Parse(Console.ReadLine() ?? string.Empty);
+            double SIDPP = Validations.ReadNumericLine("Enter SIDPP (psi): ");
 
-            Console.Write("Enter SIDPP (psi): ");
-
-            double SIDPP = double.Parse(Console.ReadLine() ?? string.Empty);
-
-            Console.Write("Enter TVD (ft): ");
-
-            double trueVerticalDepth = double.Parse(Console.ReadLine() ?? string.Empty);
+            double trueVerticalDepth = Validations.ReadNumericLine("Enter TVD (ft): ");
 
             _killWeightMudModel.MudWeightPpg = mudWeight;
             _killWeightMudModel.SIDPPPsi = SIDPP;
@@ -83,17 +78,11 @@ namespace DrillingSystem.DrillingConsole.Services
 
             ObjectDisposedException.ThrowIf(kwmEngine == IntPtr.Zero, nameof(kwmEngine));
 
-            Console.Write("\nEnter Mud Weight (kg/m³): ");
+            double mudWeight = Validations.ReadNumericLine("\nEnter Mud Weight (kg/m³): ");
 
-            double mudWeight = double.Parse(Console.ReadLine() ?? string.Empty);
+            double SIDPP = Validations.ReadNumericLine("Enter SIDPP (kPa): ");
 
-            Console.Write("Enter SIDPP (kPa): ");
-
-            double SIDPP = double.Parse(Console.ReadLine() ?? string.Empty);
-
-            Console.Write("Enter TVD (m): ");
-
-            double trueVerticalDepth = double.Parse(Console.ReadLine() ?? string.Empty);
+            double trueVerticalDepth = Validations.ReadNumericLine("Enter TVD (m): ");
 
             _killWeightMudModel.MudWeightKgM3 = mudWeight;
             _killWeightMudModel.SIDPPkPa = SIDPP;

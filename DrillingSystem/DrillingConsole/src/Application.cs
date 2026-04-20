@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 using DrillingSystem.DrillingConsole.Services;
+using DrillingSystem.DrillingConsole.Utils;
 
 namespace DrillingSystem.DrillingConsole
 {
@@ -23,6 +24,7 @@ namespace DrillingSystem.DrillingConsole
                 Console.WriteLine("2. Equivalent Circulating Density (ECD)");
                 Console.WriteLine("3. Kill Weight Mud (KWM)");
                 Console.WriteLine("4. Exit");
+                
                 Console.Write("\nEnter your choice (1 - 4): ");
 
                 string userChoice = Console.ReadLine() ?? string.Empty;
@@ -69,9 +71,9 @@ namespace DrillingSystem.DrillingConsole
             Console.WriteLine("1. Imperial");
             Console.WriteLine("2. Metric");
             
-            Console.Write("Choose: ");
+            Console.Write("\nChoose: ");
 
-            return int.Parse(Console.ReadLine() ?? string.Empty);
+            return Validations.ParseNumericLine();
         }
 
         private static void Pause()

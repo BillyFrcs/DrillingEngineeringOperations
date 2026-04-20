@@ -6,6 +6,7 @@ using System.Text;
 
 using DrillingSystem.DrillingConsole.Interfaces;
 using DrillingSystem.DrillingConsole.Models;
+using DrillingSystem.DrillingConsole.Utils;
 
 namespace DrillingSystem.DrillingConsole.Services
 {
@@ -57,17 +58,11 @@ namespace DrillingSystem.DrillingConsole.Services
 
             ObjectDisposedException.ThrowIf(ecdEngine == IntPtr.Zero, nameof(ecdEngine));
 
-            Console.Write("\nEnter Mud Weight (ppg): ");
+            double mudWeight = Validations.ReadNumericLine("\nEnter Mud Weight (ppg): ");
 
-            double mudWeight = double.Parse(Console.ReadLine() ?? string.Empty);
+            double pressureLoss = Validations.ReadNumericLine("Enter Pressure Loss (psi): ");
 
-            Console.Write("Enter Pressure Loss (psi): ");
-
-            double pressureLoss = double.Parse(Console.ReadLine() ?? string.Empty);
-
-            Console.Write("Enter TVD (ft): ");
-
-            double trueVerticalDepth = double.Parse(Console.ReadLine() ?? string.Empty);
+            double trueVerticalDepth = Validations.ReadNumericLine("Enter TVD (ft): ");
 
             _equivalentCirculatingDensityModel.MudWeightPpg = mudWeight;
             _equivalentCirculatingDensityModel.PressureLossPsi = pressureLoss;
@@ -86,17 +81,11 @@ namespace DrillingSystem.DrillingConsole.Services
 
             ObjectDisposedException.ThrowIf(ecdEngine == IntPtr.Zero, nameof(ecdEngine));
 
-            Console.Write("\nEnter Mud Weight (kg/m³): ");
+            double mudWeight = Validations.ReadNumericLine("\nEnter Mud Weight (kg/m³): ");
 
-            double mudWeight = double.Parse(Console.ReadLine() ?? string.Empty);
+            double pressureLoss = Validations.ReadNumericLine("Enter Pressure Loss (kPa): ");
 
-            Console.Write("Enter Pressure Loss (kPa): ");
-          
-            double pressureLoss = double.Parse(Console.ReadLine() ?? string.Empty);
-
-            Console.Write("Enter TVD (m): ");
-
-            double trueVerticalDepth = double.Parse(Console.ReadLine() ?? string.Empty);
+            double trueVerticalDepth = Validations.ReadNumericLine("Enter TVD (m): ");
 
             _equivalentCirculatingDensityModel.MudWeightKgM3 = mudWeight;
             _equivalentCirculatingDensityModel.PressureLosskPa = pressureLoss;
