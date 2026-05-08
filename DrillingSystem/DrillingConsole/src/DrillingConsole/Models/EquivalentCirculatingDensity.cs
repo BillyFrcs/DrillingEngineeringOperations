@@ -8,12 +8,12 @@ namespace DrillingSystem.DrillingConsole.Models
     {
         // Properties for Imperial Units
         public double MudWeightPpg { get; set; } // ppg
-        public double PressureLossPsi { get; set; } // psi
+        public double AnnularPressureLossPsi { get; set; } // psi
         public double TrueVerticalDepthFeet { get; set; } // feet
 
         // Properties for Metric Units
         public double MudWeightKgM3 { get; set; } // kg/m³
-        public double PressureLosskPa { get; set; } // kPa
+        public double AnnularPressureLosskPa { get; set; } // kPa
         public double TrueVerticalDepthMeter { get; set; } // meter
     }
 }
