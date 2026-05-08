@@ -14,9 +14,9 @@ namespace DrillingSystem.DrillingConsole.Utils
         { 
         }
 
-        public static double ReadNumericLine(string label)
+        public static double ReadNumericLine(string? value)
         {
-            Console.Write(label);
+            Console.Write(value);
 
             StringBuilder input = new StringBuilder();
             
