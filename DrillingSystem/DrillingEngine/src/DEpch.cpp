@@ -32,24 +32,24 @@ extern "C"
 		return drillingEngine->MetricHydrostaticPressure(mudWeight_kg_m3, trueVerticalDepth_meter);
 	}
 
-	DLL_EXPORT double ImperialEquivalentCirculatingDensityCalculation(DrillingSystem::DrillingEngine::DrillingEngine* drillingEngine, double mudWeight_ppg, double pressureLoss_psi, double trueVerticalDepth_feet)
+	DLL_EXPORT double ImperialEquivalentCirculatingDensityCalculation(DrillingSystem::DrillingEngine::DrillingEngine* drillingEngine, double mudWeight_ppg, double annularPressureLoss_psi, double trueVerticalDepth_feet)
 	{
 		if (drillingEngine == nullptr)
 		{
 			throw std::invalid_argument("DrillingEngine pointer is null.");
 		}
 
-		return drillingEngine->ImperialEquivalentCirculatingDensity(mudWeight_ppg, pressureLoss_psi, trueVerticalDepth_feet);
+		return drillingEngine->ImperialEquivalentCirculatingDensity(mudWeight_ppg, annularPressureLoss_psi, trueVerticalDepth_feet);
 	}
 
-	DLL_EXPORT double MetricEquivalentCirculatingDensityCalculation(DrillingSystem::DrillingEngine::DrillingEngine* drillingEngine, double mudWeight_kg_m3, double pressureLoss_kPa, double trueVerticalDepth_meter)
+	DLL_EXPORT double MetricEquivalentCirculatingDensityCalculation(DrillingSystem::DrillingEngine::DrillingEngine* drillingEngine, double mudWeight_kg_m3, double annularPressureLoss_kPa, double trueVerticalDepth_meter)
 	{
 		if (drillingEngine == nullptr)
 		{
 			throw std::invalid_argument("DrillingEngine pointer is null.");
 		}
 
-		return drillingEngine->MetricEquivalentCirculatingDensity(mudWeight_kg_m3, pressureLoss_kPa, trueVerticalDepth_meter);
+		return drillingEngine->MetricEquivalentCirculatingDensity(mudWeight_kg_m3, annularPressureLoss_kPa, trueVerticalDepth_meter);
 	}
 
 	DLL_EXPORT double ImperialKillWeightMudCalculation(DrillingSystem::DrillingEngine::DrillingEngine* drillingEngine, double currentMudWeight_ppg, double SIDPP_psi, double trueVerticalDepth_feet)
@@ -82,11 +82,11 @@ extern "C"
 
 /*
 // C-Style Wrapper (Bridge) default function
-extern "C" DLL_EXPORT double ImperialEquivalentCirculatingDensityCalculation(double mudWeight_ppg, double pressureLoss_psi, double trueVerticalDepth_feet)
+extern "C" DLL_EXPORT double ImperialEquivalentCirculatingDensityCalculation(double mudWeight_ppg, double annularPressureLoss_psi, double trueVerticalDepth_feet)
 {
 	DrillingSystem::DrillingEngine::DrillingEngine drillingEngine;
 
-	return drillingEngine.ImperialEquivalentCirculatingDensity(mudWeight_ppg, pressureLoss_psi, trueVerticalDepth_feet);
+	return drillingEngine.ImperialEquivalentCirculatingDensity(mudWeight_ppg, annularPressureLoss_psi, trueVerticalDepth_feet);
 }
 */
 

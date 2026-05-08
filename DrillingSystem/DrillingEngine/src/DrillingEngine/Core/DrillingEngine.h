@@ -22,9 +22,9 @@ namespace DrillingSystem::DrillingEngine
 
         double MetricHydrostaticPressure(double mudWeight_kg_m3, double trueVerticalDepth_meter);
 
-        double ImperialEquivalentCirculatingDensity(double mudWeight_ppg, double pressureLoss_psi, double trueVerticalDepth_feet);
+        double ImperialEquivalentCirculatingDensity(double mudWeight_ppg, double annularPressureLoss_psi, double trueVerticalDepth_feet);
 
-        double MetricEquivalentCirculatingDensity(double mudWeight_kg_m3, double pressureLoss_bar, double trueVerticalDepth_meter);
+        double MetricEquivalentCirculatingDensity(double mudWeight_kg_m3, double annularPressureLoss_bar, double trueVerticalDepth_meter);
 
         double ImperialKillWeightMud(double currentMudWeight_ppg, double SIDPP_psi, double trueVerticalDepth_feet);
 

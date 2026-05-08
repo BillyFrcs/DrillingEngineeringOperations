@@ -8,7 +8,7 @@ namespace DrillingSystem::DrillingEngine
 	class EquivalentCirculatingDensity
 	{
 	public:
-		EquivalentCirculatingDensity(double mudWeight, double pressureLoss, double trueVerticalDepth);
+		EquivalentCirculatingDensity(double mudWeight, double annularPressureLoss, double trueVerticalDepth);
 
 		~EquivalentCirculatingDensity();
 
@@ -18,7 +18,7 @@ namespace DrillingSystem::DrillingEngine
 
 	private:
 		double m_MudWeight;
-		double m_PressureLoss;
+		double m_AnnularPressureLoss;
 		double m_TrueVerticalDepth;
 	};
 }
